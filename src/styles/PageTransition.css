@@ -1,0 +1,32 @@
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  perspective: 500px;
+}
+
+i {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  opacity: 0;
+  background: rgba(59, 130, 246, 0.5);
+  box-shadow: 0px 0px 10px rgba(59, 130, 146, 1);
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+    transform: translate3d(-4px, -4px, 570px);
+  }
+}

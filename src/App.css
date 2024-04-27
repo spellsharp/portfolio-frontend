@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  font-family: "Poppins";
+  background-color: #222222;
+  min-height: 100vh;
+  height: 100%;
+  color: white;
+  /* cursor: url("assets/custom_cursor.png"), auto; */
+}
+
