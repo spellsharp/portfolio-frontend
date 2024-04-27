@@ -16,7 +16,7 @@ const ProjectsPage = () => {
       image: NumberPlate,
     },
     {
-      title: "Autnomous Driver Assistance",
+      title: "Autonomous Driver Assistance",
       date: "April 2024",
       description: "A driver assistance system containing lane detection, object detection, drowsy driver, and collision warning.",
       image: Lane,
