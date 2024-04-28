@@ -5,6 +5,7 @@ import {
   BsInstagram,
   BsTelegram,
   BsTwitter,
+  BsLinkedin,
 } from "react-icons/bs";
 import Logo from "../assets/SharanLogo.png";
 
@@ -20,16 +21,46 @@ const FooterComponent = () => {
             </div>
           </a>
           <div className="mt-4 flex space-x-6 sm:mt-0 items-center text-3xl">
-            <Footer.Icon className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out" href="https://discordapp.com/users/1037190174939037807" target='_blank' icon={BsDiscord} />
-            <Footer.Icon className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out" href="https://instagram.com/ssv_myself" target="_blank" icon={BsInstagram} />
-            <Footer.Icon className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out" href="https://twitter.com/shrisharanyan" target='_blank' icon={BsTwitter} />
-            <Footer.Icon className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out" href="https://github.com/spellsharp" target="_blank"  icon={BsGithub} />
-            <Footer.Icon className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out" href="https://t.me/ssv_myself" target="_blank" icon={BsTelegram} />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://linkedin.com/in/shrisharanyan"
+              target="_blank"
+              icon={BsLinkedin}
+            />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://discordapp.com/users/1037190174939037807"
+              target="_blank"
+              icon={BsDiscord}
+            />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://instagram.com/ssv_myself"
+              target="_blank"
+              icon={BsInstagram}
+            />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://twitter.com/shrisharanyan"
+              target="_blank"
+              icon={BsTwitter}
+            />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://github.com/spellsharp"
+              target="_blank"
+              icon={BsGithub}
+            />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://t.me/ssv_myself"
+              target="_blank"
+              icon={BsTelegram}
+            />
           </div>
         </div>
         <div className="w-full sm:flex sm:items-center sm:justify-between pt-5">
           <p>Made by Shrisharanyan Vasu</p>
-          
         </div>
       </div>
     </Footer>
