@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
       {isMobile ? (
         <FaBars
-          className="w-[28px] h-[28px] object-contain"
+          className="w-[28px] h-[28px] pr-2 object-contain"
           onClick={() => setToggle(!toggle)}
         />
       ) : (
@@ -74,14 +74,14 @@ const Navbar = () => {
       )}
       {isMobile && toggle && (
         <div
-          className={`flex bg-default bg-opacity-95 shadow-2xl border border-white border-opacity-10 z-10 p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
+          className={`flex bg-default bg-opacity-95 shadow-[0_0_15px_1px_rgba(59,130,246,0.3)] border border-white border-opacity-10 z-10 p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
+                className={`font-medium cursor-pointer text-[16px] ${
+                  active === nav.title ? "underline" : "fuck"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
