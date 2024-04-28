@@ -1,8 +1,10 @@
 import Typewriter from "typewriter-effect/";
 import Sharan from "../assets/shrisharanyan.png";
 import DownloadCV from "../services/DownloadCV";
+import {useState} from "react";
 
 const HomePage = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <div>
@@ -16,8 +18,8 @@ const HomePage = () => {
               <div className="text-3xl font-semibold lg:text-5xl md:text-5xl sm:text-4xl py-2">
                 You're looking at
               </div>
-              <div className="text-4xl lg:text-7xl md:text-7xl sm:text-4xl font-bold text-blue-500">
-                Shri<span className="hover:text-red-400 transition-all duration-500 ease-in-out">sharan</span>yan
+              <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="text-4xl lg:text-7xl md:text-7xl sm:text-4xl font-bold text-blue-500">
+                Shri<span className={`${isHovered ? "text-red-400": ""} transition-all duration-500 ease-in-out`}>sharan</span>yan
               </div>
               <div className="text-4xl lg:text-7xl md:text-7xl sm:text-4xl font-bold text-blue-500">
                 Vasu
