@@ -1,6 +1,4 @@
-import Navbar from "../components/Navbar";
 import Typewriter from "typewriter-effect/";
-import FooterComponent from "../components/Footer";
 import Sharan from "../assets/shrisharanyan.png";
 import DownloadCV from "../services/DownloadCV";
 
@@ -57,7 +55,7 @@ const HomePage = () => {
               <div>
                 <img
                   src={Sharan}
-                  alt="Sharan's profile photo"
+                  alt="Sharan's profile"
                   className="lg:h-[90vh] -ml-5 sm:h-96 pb-20 md:h-[75vh]"
                 />
               </div>
