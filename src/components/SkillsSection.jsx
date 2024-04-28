@@ -18,18 +18,6 @@ import {
 
 import { Tilt } from "react-tilt";
 
-const defaultOptions = {
-  reverse: true, // reverse the tilt direction
-  max: 35, // max tilt rotation (degrees)
-  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-  scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
-  speed: 1000, // Speed of the enter/exit transition
-  transition: true, // Set a transition on enter/exit.
-  axis: null, // What axis should be disabled. Can be X or Y.
-  reset: true, // If the tilt effect has to be reset on exit.
-  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-};
-
 const skillData = [
   {
     type: "Frontend",
@@ -124,9 +112,9 @@ const SkillsSection = () => {
                   key={skillGroup.type}
                 >
                   {skillGroup.icons.map((skill) => (
-                    <Tilt options={defaultOptions}>
+                    <Tilt>
                       <div
-                        className="bg-default shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] rounded-lg p-2 w-fit h-fit"
+                        className="bg-default shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:shadow-[0_0_15px_1px_rgba(239,68,68,0.60)] transition-all duration-500 ease-in-out rounded-lg p-2 w-fit h-fit"
                         key={skill.name}
                         title={skill.name}
                       >
