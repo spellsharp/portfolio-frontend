@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/SharanLogo.png";
 import { Link } from "react-router-dom";
@@ -30,6 +30,21 @@ export const navLinks = [
 const Navbar = () => {
   const [active, setActive] = useState();
   const [toggle, setToggle] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth <= 865;
 
   return (
     <nav className="bg-default text-white font-bold w-full flex py-6 justify-between items-center navbar">
@@ -39,30 +54,29 @@ const Navbar = () => {
           haran<span className="ml-1 text-blue-500">.</span>
         </div>
       </div>
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-        {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-xl hover:underline hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500 hover:bg-opacity-20 rounded-full underline-offset-4 transition-all ease-in-out duration-500 ${
-              active === nav.title ? "text-underline" : "text-dimWhite"
-            } ${index === navLinks.length - 1 ? "mr-5" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
-          >
-            <a href={`${nav.id}`}>{nav.title}</a>
-          </li>
-        ))}
-      </ul>
-      <div className="sm:hidden md:hidden flex flex-1 justify-end items-center px-1">
+      {isMobile ? (
         <FaBars
           className="w-[28px] h-[28px] object-contain"
           onClick={() => setToggle(!toggle)}
         />
+      ) : (
+        <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+          {navLinks.map((nav, index) => (
+            <li
+              key={nav.id}
+              className={`font-poppins font-normal cursor-pointer text-xl hover:underline hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500 hover:bg-opacity-20 rounded-full underline-offset-4 transition-all ease-in-out duration-500 ${
+                active === nav.title ? "text-underline" : "text-dimWhite"
+              } ${index === navLinks.length - 1 ? "mr-5" : "mr-10"}`}
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
+      )}
+      {isMobile && toggle && (
         <div
-          className={`${
-            !toggle
-              ? "hidden"
-              : "flex bg-default bg-opacity-95 shadow-2xl border border-white border-opacity-10 z-10"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
+          className={`flex bg-default bg-opacity-95 shadow-2xl border border-white border-opacity-10 z-10 p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
@@ -78,7 +92,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
