@@ -14,8 +14,15 @@ const HomePage = () => {
               <div className="text-2xl lg:text-3xl md:text-3xl sm:text-2xl">
                 Hey there!
               </div>
-              <div className="text-3xl font-semibold lg:text-5xl md:text-5xl sm:text-4xl pt-2">
-                I'm Sharan,
+              <br />
+              <div className="text-3xl font-semibold lg:text-5xl md:text-5xl sm:text-4xl py-2">
+                You're looking at
+              </div>
+              <div className="text-4xl lg:text-7xl md:text-7xl sm:text-4xl font-bold text-blue-500">
+                Shri<span className="hover:text-red-400 transition-all duration-500 ease-in-out">sharan</span>yan
+              </div>
+              <div className="text-4xl lg:text-7xl md:text-7xl sm:text-4xl font-bold text-blue-500">
+                Vasu
               </div>
               <div className="text-gray-300 text-sm lg:text-xl md:text-xl sm:text-sm lg:max-w-xl md:max-w-md">
                 a 2nd year student at Amrita Vishwa Vidyapeetham, Amritapuri
@@ -37,7 +44,7 @@ const HomePage = () => {
                   />
                 </span>
               </div>
-              <div className="flex flex-col justify-center lg:justify-start lg:flex-row md:flex-row sm:flex-col py-5">  
+              <div className="flex flex-col justify-center lg:justify-start lg:flex-row md:flex-row sm:flex-col py-5">
                 <button
                   onClick={() => DownloadCV()}
                   className="sm:mx-auto lg:mx-0 md:mx-0 mx-auto lg:p-3 lg:text-xl md:p-2 md:text-2xl sm:p-2 sm:text-xl max-w-fit p-2 text-xl shadow-[0_0_15px_1px_rgba(59,130,246,0.60)] border bg-blue-500 rounded-md border-white bg-opacity-0 lg:border-opacity-100 hover:bg-blue-500 hover:border-opacity-0 hover:transition-all duration-500 ease-in-out"
