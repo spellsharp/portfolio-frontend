@@ -64,7 +64,7 @@ const Navbar = () => {
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-xl hover:underline hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500 hover:bg-opacity-20 rounded-full underline-offset-4 transition-all ease-in-out duration-500 ${
                 active === nav.title ? "text-underline" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(239,68,68,0.30)] hover:bg-red-500" : "mr-10"}`}
+              } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(239,68,6,0.30)] hover:bg-red-500" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`${nav.id}`}>{nav.title}</a>
