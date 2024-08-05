@@ -24,7 +24,7 @@ export default function BasicTimeline({ data }) {
                   </TimelineSeparator>
                   <TimelineContent>
                     <div className="border border-white border-opacity-10 rounded-md p-5 shadow-[0_0_15px_1px_rgba(59,130,246,0.60)]">
-                      <div className="lg:text-3xl md:text-xl sm:text-lg text-lg font-semibold">
+                      <div className="lg:text-3xl md:text-xl sm:text-lg text-lg font-semibold font-poppins">
                         {item.title}
                       </div>
                       <div>{item.date}</div>

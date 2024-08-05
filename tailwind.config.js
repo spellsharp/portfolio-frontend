@@ -7,9 +7,9 @@ module.exports = {
         'default': '#1c1c1c',
         'section': '#1a1a1a',
       },
-      // fontFamily: {
-      //   'poppins': ['Poppins', 'sans-serif'],
-      // },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
