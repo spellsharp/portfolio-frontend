@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaBars} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import Logo from "../assets/SharanLogo.png";
 
 export const navLinks = [
@@ -45,10 +45,10 @@ const Navbar = () => {
   const isMobile = windowWidth <= 865;
 
   return (
-    <nav className="bg-default text-white font-bold w-full flex py-6 justify-between items-center navbar">
+    <nav className="bg-[#1c1c1c] bg-opacity-20 text-white font-bold w-full flex py-6 justify-between items-center navbar">
       <div>
-        <div className="ml-5 lg:text-6xl md:text-6xl sm:text-4xl text-4xl font-bold flex items-center">
-          <img src={Logo} alt="Logo" className="lg:w-16 lg:h-14 md:w-16 md:h-14 sm:w-14 sm:h-12 h-14 w-12  mb-1 -mr-1" />
+        <div className="ml-5 lg:text-4xl md:text-4xl sm:text-4xl text-4xl font-bold flex items-center">
+          <img src={Logo} alt="Logo" className="lg:w-12 lg:h-11 md:w-12 md:h-11 sm:w-12 sm:h-11 h-11 w-12  mb-1 -mr-1" />
           haran<span className="ml-1 text-blue-500">.</span>
         </div>
       </div>

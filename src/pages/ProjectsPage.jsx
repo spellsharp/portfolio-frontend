@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
+import Portfolio from "../assets/Portfolio.png"
 import Lane from "../assets/lane_detection.jpeg";
 import Garbage from "../assets/garbage_classification.png";
 import NumberPlate from "../assets/anpr.jpeg";
@@ -10,12 +11,12 @@ import HVM from "../assets/hvm.png"
 const ProjectsPage = () => {
   const projects = [
     {
-      title: "Number Plate Recognition",
-      date: "Present",
-      description: "A number plate recognition system that recognizes number plates from images using object detection, GAN enhancement and OCR.",
-      image: NumberPlate,
-      techStack: "OpenCV, YOLO, Tesseract, GANs",
-      // github: "",
+      title: "Portfolio",
+      date: "July 2024",
+      description: "A portfolio website made using React, Tailwindcss",
+      image: Portfolio,
+      techStack: "React, Tailwindcss",
+      github: "https://github.com/spellsharp/portfolio-frontend",
     },
     {
       title: "Autonomous Driver Assistance",

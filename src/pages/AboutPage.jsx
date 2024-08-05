@@ -1,23 +1,20 @@
 import React from "react";
-import About from "../assets/computer_guy.svg";
+import About from "../assets/sharan_mic.jpg";
 import SkillsSection from "../components/SkillsSection";
 import TimeLine from "../components/TimeLine";
 import aboutData from "../content/about.json";
 import timelineData from "../content/timeline.json";
+import ImageBlob from "../components/ImageBlob";
 
 const AboutPage = () => {
   return (
     <div>
       <section>
         <div className="bg-default px-10 min-h-[80vh]">
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-5xl">
             <div className="flex md:flex-col sm:flex-col flex-col lg:flex-row justify-between py-20 space-x-20">
               <div className="h-auto w-auto py-5">
-                <img
-                  src={About}
-                  alt=""
-                  className="lg:h-fit lg:w-fit md:h-48 md:w-72 sm:h-44 sm:w-64 mx-auto"
-                />
+                <ImageBlob src={About} imgsize={300} />
               </div>
               <div className="mx-auto px-5">
                 <br />

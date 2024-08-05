@@ -33,7 +33,6 @@ const App = () => {
                     <>
                       <Navbar />
                       <HomePage />
-                      <Footer />
                     </>
                   }
                 />
@@ -43,7 +42,6 @@ const App = () => {
                     <>
                       <Navbar />
                       <AboutPage />
-                      <Footer />
                     </>
                   }
                 />
@@ -53,7 +51,6 @@ const App = () => {
                     <>
                       <Navbar />
                       <ProjectsPage />
-                      <Footer />
                     </>
                   }
                 />
@@ -64,7 +61,6 @@ const App = () => {
                     <>
                       <Navbar />
                       <ContactPage />
-                      <Footer />
                     </>
                   }
                 />
