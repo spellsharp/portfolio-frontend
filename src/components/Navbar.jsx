@@ -1,6 +1,30 @@
 import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import Logo from "../assets/SharanLogo.png";
+import styled from 'styled-components';
+
+const UnderlineLink = styled.a`
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+`;
 
 export const navLinks = [
   {
@@ -12,15 +36,15 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "projects",
+    id: "/projects",
     title: "Projects",
   },
   {
-    id: "contact",
+    id: "/contact",
     title: "Contact",
   },
   {
-    id: "wormhole",
+    id: "/wormhole",
     title: "Wormhole"
   }
 ];
@@ -54,7 +78,7 @@ const Navbar = () => {
       </div>
       {isMobile ? (
         <FaBars
-          className="w-[28px] h-[28px] pr-2 object-contain"
+          className="w-[28px] h-[28px] pr-4 object-contain"
           onClick={() => setToggle(!toggle)}
         />
       ) : (
@@ -67,7 +91,11 @@ const Navbar = () => {
               } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`${nav.id}`}>{nav.title}</a>
+              {/* <Link to={`${nav.id}`} className="nav-link">
+                {`${nav.title}`}
+              </Link> */}
+              <UnderlineLink href={`${nav.id}`}>{nav.title}</UnderlineLink>
+
             </li>
           ))}
         </ul>
@@ -85,7 +113,10 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`${nav.id}`}>{nav.title}</a>
+                <Link to={`${nav.id}`} className="nav-link">
+                {`${nav.title}`}
+                </Link>
+
               </li>
             ))}
           </ul>

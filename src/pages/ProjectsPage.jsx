@@ -1,12 +1,11 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import Portfolio from "../assets/Portfolio.png"
+import Portfolio from "../assets/Portfolio.png";
 import Lane from "../assets/lane_detection.jpeg";
 import Garbage from "../assets/garbage_classification.png";
-import NumberPlate from "../assets/anpr.jpeg";
-import Academize from "../assets/academize.jpeg";
+import HVM from "../assets/hvm.png";
 import Trasheroo from "../assets/trasheroo.png";
-import HVM from "../assets/hvm.png"
+import Academize from "../assets/academize.jpeg";
 
 const ProjectsPage = () => {
   const projects = [
