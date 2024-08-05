@@ -8,7 +8,7 @@ html {
 .App {
   font-family: "Poppins";
   background-color: #222222;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   height: 100%;
   color: white;
   /* cursor: url("assets/custom_cursor.png"), auto; */

@@ -95,7 +95,7 @@ const skillData = [
 const SkillsSection = () => {
   return (
     <div>
-      <div className="bg-default min-h-[80vh] px-10">
+      <div className="min-h-[80vh] px-10">
         <div className="mx-auto max-w-5xl">
           <div className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
             Skills & Interests

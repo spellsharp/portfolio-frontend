@@ -32,7 +32,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="bg-[#1c1c1c] py-10">
         <SkillsSection />
       </section>
       <br />

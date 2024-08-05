@@ -45,7 +45,7 @@ const Navbar = () => {
   const isMobile = windowWidth <= 865;
 
   return (
-    <nav className="bg-[#1c1c1c] bg-opacity-20 text-white font-bold w-full flex py-6 justify-between items-center navbar">
+    <nav className="absolute top-0 bg-[#1c1c1c] bg-opacity-20 text-white font-bold w-full flex py-6 justify-between items-center navbar">
       <div>
         <div className="ml-5 lg:text-4xl md:text-4xl sm:text-4xl text-4xl font-bold flex items-center">
           <img src={Logo} alt="Logo" className="lg:w-12 lg:h-11 md:w-12 md:h-11 sm:w-12 sm:h-11 h-11 w-12  mb-1 -mr-1" />

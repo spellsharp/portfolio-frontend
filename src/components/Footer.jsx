@@ -11,7 +11,7 @@ import Logo from "../assets/SharanLogo.png";
 
 const FooterComponent = () => {
   return (
-    <Footer container className="p-0 absolute">
+    <Footer container className="p-0">
       <div className="w-full bg-section p-5 h-fit border-t-2 border-blue-300 border-opacity-5">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <a href="/">
