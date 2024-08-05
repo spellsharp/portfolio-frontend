@@ -95,7 +95,7 @@ const skillData = [
 const SkillsSection = () => {
   return (
     <div>
-      <div className="min-h-[80vh] px-10">
+      <div className="min-h-[100vh] px-10">
         <div className="mx-auto max-w-5xl">
           <div className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
             Skills & Interests
@@ -114,7 +114,7 @@ const SkillsSection = () => {
                   {skillGroup.icons.map((skill) => (
                     <Tilt>
                       <div
-                        className="bg-default shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:shadow-[0_0_15px_1px_rgba(239,68,68,0.60)] transition-all duration-500 ease-in-out rounded-lg p-2 w-fit h-fit"
+                        className="bg-[#222222] shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:shadow-[0_0_15px_1px_rgba(239,68,68,0.60)] transition-all duration-500 ease-in-out rounded-lg p-2 w-fit h-fit"
                         key={skill.name}
                         title={skill.name}
                       >

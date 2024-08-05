@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div>
+      <div className="flex items-center justify-center min-h-screen ">
         <section className="flex drop-shadow-lg mt-20">
           <div className="flex flex-col-reverse lg:flex-row sm:flex-col-reverse md:flex-col-reverse mx-auto items-center lg:space-x-48 md:space-x-20">
             <div className="lg:text-left md:text-center sm:text-center text-center px-5">
@@ -79,9 +79,9 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <div className="w-full">
+      </div>
+      <div className="w-full">
           <Footer />
-        </div>
       </div>
     </>
   );

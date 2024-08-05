@@ -60,7 +60,7 @@ const ProjectsPage = () => {
   ];
   // const { image, title, description, date, techStack, github, link } = project;
   return (
-    <div className="min-h-[76vh] max-w-6xl mx-auto mt-10 p-4">
+    <div className="min-h-screen max-w-6xl mx-auto mt-24 p-4">
         <h1 className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
           Projects
         </h1>

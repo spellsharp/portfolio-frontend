@@ -9,7 +9,7 @@ import ImageBlob from "../components/ImageBlob";
 const AboutPage = () => {
   return (
     <div>
-      <section>
+      <section className="flex min-h-screen items-center justify-center">
         <div className="bg-default px-10 min-h-[80vh]">
           <div className="mx-auto max-w-5xl">
             <div className="flex md:flex-col sm:flex-col flex-col lg:flex-row justify-between py-20 space-x-20">
@@ -32,7 +32,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#1c1c1c] py-10">
+      <section className="bg-[#222222] py-10">
         <SkillsSection />
       </section>
       <br />
