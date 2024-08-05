@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'default': '#1c1c1c',
-        'section': '#1a1a1a',
+        'default': '#151515',
+        'section': '#1c1c1c',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

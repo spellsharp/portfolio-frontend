@@ -2,12 +2,12 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #1c1c1c;
+  background-color: #151515;
 }
 
 .App {
   font-family: "Poppins";
-  background-color: #1c1c1c;
+  background-color: #151515;
   /* min-height: 100vh; */
   height: 100%;
   color: white;

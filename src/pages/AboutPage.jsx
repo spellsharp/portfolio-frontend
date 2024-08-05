@@ -11,12 +11,12 @@ const AboutPage = () => {
     <div>
       <section className="flex min-h-screen items-center justify-center">
         <div className="bg-default px-10 min-h-[80vh]">
-          <div className="mx-auto max-w-5xl">
-            <div className="flex md:flex-col sm:flex-col flex-col lg:flex-row justify-between py-20 space-x-20">
+          <div className="mx-auto max-w-5xl py-20">
+            <div className="flex md:flex-col sm:flex-col flex-col lg:flex-row justify-between space-x-20">
               <div className="h-auto w-auto py-5">
                 <ImageBlob src={About} imgsize={300} />
               </div>
-              <div className="mx-auto px-5">
+              <div className="mx-auto px-5">  
                 <br />
                 <div className="flex flex-col space-y-2 lg:max-w-7xl sm:max-w-full lg:text-lg md:text-sm md:max-w-4xl sm:text-sm sm:-ml-10 -ml-10 text-sm ">
                   {aboutData.map((data, index) => {
@@ -32,7 +32,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#222222] py-10">
+      <section className="bg-section py-10">
         <SkillsSection />
       </section>
       <br />
