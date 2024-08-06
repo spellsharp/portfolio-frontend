@@ -5,7 +5,7 @@ const NotFoundPage = () => {
   return (
     <>
       <div className="flex lg:flex-row md:flex-col sm:flex-col-reverse flex-col-reverse justify-center mx-auto max-w-7xl">
-        <img src={NotFound} className="lg:h-screen md:h-[70vh]"></img>
+        <img alt="NotFound" src={NotFound} className="lg:h-screen md:h-[70vh]"></img>
         <div className="mx-auto my-auto px-10 py-10">
           <div className="lg:text-5xl md:text-5xl sm:text-3xl text-3xl font-bold">
             Oops!

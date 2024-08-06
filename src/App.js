@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import "./App.css";
-import Footer from "./components/Footer";
 import NotFoundPage from "./pages/NotFoundPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";

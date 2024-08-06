@@ -65,9 +65,6 @@
   }
   
   .blob-container {
-    position: relative;
-    width: 350px;
-    height: 350px;
     border-radius: 50%;
     overflow: hidden;
     animation: blobAnimation 60s infinite; /* Faster speed */

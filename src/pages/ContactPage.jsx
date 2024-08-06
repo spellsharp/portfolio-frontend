@@ -9,7 +9,8 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log(formData);
     alert("Thank you for contacting me! I will get back to you soon.");
     
@@ -22,7 +23,7 @@ const ContactPage = () => {
         <img src={Collaborate} alt="Collaborate" className="w-1/2" />
       </div>
       <div>
-        <form className="max-w-xl mx-auto border border-white border-opacity-10 p-10 rounded-xl m-2 shadow-[0_0_15px_1px_rgba(59,130,246,0.60)]">
+        <form className="max-w-2xl mx-auto border border-white border-opacity-10 p-10 rounded-xl m-2 shadow-[0_0_15px_1px_rgba(59,130,246,0.60)]">
           <div className="text-4xl font-semibold w-full mx-auto text-center">
             Contact me!
           </div>
@@ -40,6 +41,7 @@ const ContactPage = () => {
               id="name"
               name="name"
               placeholder="Enter your name"
+              required
               onChange={(e) => {
                 setFormData({ ...formData, name: e.target.value });
               }}
@@ -58,6 +60,7 @@ const ContactPage = () => {
               id="email"
               name="email"
               placeholder="Enter your email"
+              required
               onChange={(e) => {
                 setFormData({ ...formData, email: e.target.value });
               }}
@@ -76,6 +79,7 @@ const ContactPage = () => {
               name="message"
               rows="4"
               placeholder="Enter your message"
+              required
               onChange={(e) => {
                 setFormData({ ...formData, message: e.target.value });
               }}
@@ -83,7 +87,7 @@ const ContactPage = () => {
           </div>
           <div className="w-full text-center">
             <button
-              onClick={() => handleSubmit()}
+              onSubmit={() => handleSubmit()}
               className="p-2 text-sm max-w-fit border bg-blue-500 rounded-md border-white bg-opacity-0 hover:bg-blue-500 hover:border-opacity-0 hover:transition-all duration-500 ease-in-out"
             >
               Submit

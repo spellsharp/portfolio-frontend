@@ -14,3 +14,19 @@ html {
   /* cursor: url("assets/custom_cursor.png"), auto; */
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(59 130 246);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(26, 114, 255);
+}

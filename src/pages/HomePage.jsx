@@ -72,11 +72,12 @@ const HomePage = () => {
                 </button>
               </div>
             </div>
-            <div className="flex mx-auto">
-              <div>
+            <div className="w-auto">
+              <div className="mx-auto">
                 <ImageBlob src={Sharan} />
               </div>
             </div>
+            
           </div>
         </section>
       </div>

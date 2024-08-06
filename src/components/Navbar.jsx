@@ -71,14 +71,16 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 text-white font-bold w-full flex py-6 justify-between items-center navbar">
       <div>
-        <div className="ml-5 lg:text-4xl md:text-4xl sm:text-4xl text-4xl font-bold flex items-center">
-          <img src={Logo} alt="Logo" className="lg:w-12 lg:h-11 md:w-12 md:h-11 sm:w-12 sm:h-11 h-11 w-12  mb-1 -mr-1" />
-          haran<span className="ml-1 text-blue-500">.</span>
-        </div>
+        <Link to="/" className="nav-link">
+          <div className="ml-5 lg:text-4xl md:text-4xl sm:text-4xl text-4xl font-bold flex items-center">
+            <img src={Logo} alt="Logo" className="lg:w-12 lg:h-11 md:w-12 md:h-11 sm:w-12 sm:h-11 h-11 w-12  mb-1 -mr-1" />
+            haran<span className="ml-1 text-blue-500">.</span>
+          </div>
+        </Link>
       </div>
       {isMobile ? (
         <FaBars
-          className="w-[28px] h-[28px] pr-4 object-contain"
+          className="w-[35px] h-[33px] pr-4 object-contain"
           onClick={() => setToggle(!toggle)}
         />
       ) : (
@@ -89,7 +91,7 @@ const Navbar = () => {
               className={`font-poppins font-normal cursor-pointer text-xl hover:underline hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500 hover:bg-opacity-20 rounded-full underline-offset-4 transition-all ease-in-out duration-500 ${
                 active === nav.title ? "text-underline" : "text-dimWhite"
               } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500" : "mr-10"}`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => {setActive(nav.title); setToggle(!toggle)}}
             >
               {/* <Link to={`${nav.id}`} className="nav-link">
                 {`${nav.title}`}
@@ -102,16 +104,16 @@ const Navbar = () => {
       )}
       {isMobile && toggle && (
         <div
-          className={`flex bg-default bg-opacity-95 shadow-[0_0_15px_1px_rgba(59,130,246,0.3)] border border-white border-opacity-10 z-10 p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
+          className={`flex bg-default bg-opacity-95 shadow-[0_0_15px_1px_rgba(59,130,246,0.3)] border border-white border-opacity-10 z-10 px-10 py-5 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
         >
-          <ul className="list-none flex justify-end items-start flex-1 flex-col">
+          <ul className="list-none flex justify-center items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-medium cursor-pointer text-[16px] ${
+                className={`font-medium cursor-pointer text-md ${
                   active === nav.title ? "underline" : ""
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
+                onClick={() => {setActive(nav.title); setToggle(!toggle)}}
               >
                 <Link to={`${nav.id}`} className="nav-link">
                 {`${nav.title}`}

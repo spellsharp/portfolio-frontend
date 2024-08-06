@@ -114,7 +114,7 @@ const SkillsSection = () => {
                   {skillGroup.icons.map((skill) => (
                     <Tilt>
                       <div
-                        className="bg-section shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:shadow-[0_0_15px_1px_rgba(239,68,68,0.60)] transition-all duration-500 ease-in-out rounded-lg p-2 w-fit h-fit"
+                        className="bg-section shadow-[0_0_15px_1px_rgba(0,0,0,0.3)] hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] transition-all duration-350 ease-in-out rounded-lg p-2 w-fit h-fit"
                         key={skill.name}
                         title={skill.name}
                       >
