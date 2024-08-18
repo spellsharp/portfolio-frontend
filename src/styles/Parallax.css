@@ -1,0 +1,13 @@
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.parallax1 {
+    background-image: url('../assets/about_collage.png'); 
+}
+
+  

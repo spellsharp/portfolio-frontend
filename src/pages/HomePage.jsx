@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect/";
-import Sharan from "../assets/sharan.jpg"; /* Change to jpg */
+import Sharan from "../assets/sharan_mic.jpg";
 import DownloadCV from "../services/DownloadCV";
 import ImageBlob from "../components/ImageBlob";
 import { useEffect, useState } from "react";
@@ -74,7 +74,7 @@ const HomePage = () => {
             </div>
             <div className="w-auto">
               <div className="mx-auto">
-                <ImageBlob />
+                <ImageBlob src={Sharan} />
               </div>
             </div>
             
