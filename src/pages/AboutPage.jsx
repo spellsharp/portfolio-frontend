@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsSection from "../components/SkillsSection";
+import SkillsSection from "../components/AboutSkillsSection";
 import AboutHeroSection from "../components/AboutHeroSection";
 import AboutEducationSection from "../components/AboutEducationSection";
 const AboutPage = () => {
@@ -8,7 +8,7 @@ const AboutPage = () => {
       <section>
       <AboutHeroSection />
       </section>
-      
+
       <section>
         <AboutEducationSection />
       </section>

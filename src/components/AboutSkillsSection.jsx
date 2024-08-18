@@ -97,7 +97,7 @@ const SkillsSection = () => {
     <div>
       <div className="min-h-[100vh] px-10 pt-10">
         <div className="mx-auto max-w-5xl">
-          <div className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
+          <div className="flex justify-center lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
             Skills & Interests
           </div>
           <div className="pt-5">

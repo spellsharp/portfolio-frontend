@@ -64,7 +64,7 @@ const Parallax = () => {
         <div className="mx-5">
           <br />
           <div className={`h-[500px] lg:w-[1000px] md:w-[700px] sm:w-[${width}px] w-[${width}px] flex flex-col justify-start space-y-4 lg:max-w-6xl sm:max-w-full lg:text-lg md:text-md md:max-w-4xl sm:text-md text-md`}>
-            <h1 className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium pt-10 lg:pb-10 md:pb-10 sm:pb-2 pb-2">
+            <h1 className="lg:mx-0 md:mx-0 sm:mx-auto mx-auto lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium pt-10 lg:pb-10 md:pb-10 sm:pb-2 pb-2">
               About me
             </h1>
             {animatedText.map((text, index) => (
