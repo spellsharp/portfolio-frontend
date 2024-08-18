@@ -8,9 +8,9 @@ const HomePage = () => {
     <>
       <div className="flex items-center justify-center min-h-screen ">
         <section className="flex drop-shadow-lg mt-20">
-          <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col mx-auto items-center lg:space-x-24 md:space-x-20">
+          <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col mx-auto items-center lg:space-x-12 md:space-x-12 sm:space-x-0 space-x-0">
             <div className="w-auto">
-              <div className="mx-auto px-10">
+              <div className="mx-auto px-32">
                 <ImageBlob src={Sharan} />
               </div>
             </div>

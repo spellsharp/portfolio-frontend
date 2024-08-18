@@ -23,7 +23,7 @@ const ImageBlob = ({ src }) => {
     <>
       <div
         id="blob"
-        className="blob-container lg:h-[350px] lg:w-[350px] md:h-[400px] md:w-[400px] sm:h-[250px] sm:w-[250px] h-[250px] w-[250px] shadow-[0_0_25px_1px_rgba(59,130,246,0.60)]"
+        className="blob-container lg:h-[450px] lg:w-[450px] md:h-[400px] md:w-[400px] sm:h-[250px] sm:w-[250px] h-[250px] w-[250px] shadow-[0_0_25px_1px_rgba(59,130,246,0.60)]"
         style={{ 
           borderRadius: coordinates,
         }}
