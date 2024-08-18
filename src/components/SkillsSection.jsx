@@ -101,7 +101,7 @@ const SkillsSection = () => {
             Skills & Interests
           </div>
           <div className="pt-5">
-            {skillData.map((skillGroup) => (
+            {skillData.map((skillGroup, index) => (
               <>
                 <br />
                 <br />
@@ -109,13 +109,13 @@ const SkillsSection = () => {
                 <br />
                 <div
                   className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
-                  key={skillGroup.type}
+                  key={index}
                 >
-                  {skillGroup.icons.map((skill) => (
+                  {skillGroup.icons.map((skill, index) => (
                     <Tilt>
                       <div
                         className="bg-section shadow-[0_0_15px_1px_rgba(0,0,0,0.3)] hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] transition-all duration-350 ease-in-out rounded-lg p-2 w-fit h-fit"
-                        key={skill.name}
+                        key={index}
                         title={skill.name}
                       >
                         {skill.icon}

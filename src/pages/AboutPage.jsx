@@ -7,7 +7,9 @@ import AboutHeroSection from "../components/AboutHeroSection";
 const AboutPage = () => {
   return (
     <div className="pb-20">
+      <section>
       <AboutHeroSection />
+      </section>
       <section className="bg-section py-10">
         <SkillsSection />
       </section>
