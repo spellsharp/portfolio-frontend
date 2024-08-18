@@ -19,3 +19,16 @@
     height: 130vh;
     background-image: url('../assets/skills.png');
 }
+
+@media screen and (max-width: 768px) {
+    .parallax1 {
+        height: 12  0vh;
+    }
+    .parallax2 {
+        height: 140vh;
+    }
+    .parallax3 {
+        height: 250vh;
+    }
+}
+

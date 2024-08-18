@@ -18,10 +18,6 @@ const AboutPage = () => {
       <section>
         <AboutSkillsSection />
       </section>
-      
-      <section>
-        <Footer />
-      </section>
     </div>
   );
 };
