@@ -102,7 +102,7 @@ const skillData = [
       {
         name: "Flask",
         icon: <FlaskOriginal size={100} />,
-        level: 4,
+        level: 3,
       },
     ],
   },
