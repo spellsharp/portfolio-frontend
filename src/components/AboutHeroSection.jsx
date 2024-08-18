@@ -9,8 +9,14 @@ const Parallax = () => {
   const [displayInterval, setDisplayInterval] = useState();
 
   const updateDataBasedOnWidth = () => {
-    if (window.innerWidth <= 760) {
-      setData(aboutData.lg);
+    if (window.innerWidth <= 400) {
+      setData(aboutData.xs);
+      setWidth(window.innerWidth);
+      console.log(width);
+      setDisplayInterval(10);
+    }
+    else if (window.innerWidth <= 760) {
+      setData(aboutData.sm);
       setWidth(window.innerWidth);
       console.log(width);
       setDisplayInterval(10);

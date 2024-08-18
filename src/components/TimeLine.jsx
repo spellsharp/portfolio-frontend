@@ -9,7 +9,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 export default function BasicTimeline({ data }) {
   return (
     <>
-      <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col max-w-5xl mx-auto">
         <div className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl lg:px-0 md:px-10 sm:px-10 px-10 font-medium">
           Education
         </div>
@@ -23,7 +23,7 @@ export default function BasicTimeline({ data }) {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <div className="border border-white border-opacity-10 rounded-md p-5 shadow-[0_0_15px_1px_rgba(59,130,246,0.60)]">
+                    <div className="border border-white bg-black bg-opacity-50 border-opacity-10 rounded-md p-5 shadow-[0_0_15px_1px_rgba(255,255,255,0.30)]">
                       <div className="lg:text-3xl md:text-xl sm:text-lg text-lg font-semibold font-poppins">
                         {item.title}
                       </div>

@@ -10,4 +10,7 @@
     background-image: url('../assets/about_collage.png'); 
 }
 
-  
+.parallax2 {
+    height: 130vh;
+    background-image: url('../assets/education.png');
+}
