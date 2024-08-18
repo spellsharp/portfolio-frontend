@@ -109,16 +109,16 @@ const skillData = [
 ];
 
 const levelToColor = {
-  1: "239,68,68,0.3",
-  2: "239,68,68,0.3",
-  3: "239,68,68,0.3",
-  4: "234,179,8,0.3",
-  5: "234,179,8,0.3",
-  6: "234,179,8,0.3",
-  7: "34,197,94,0.3",
-  8: "34,197,94,0.3",
-  9: "34,197,94,0.3",
-  10: "34,197,94,0.3"
+  1: ["239,68,68,0.3", "red-500"],
+  2: ["239,68,68,0.3", "red-500"],
+  3: ["239,68,68,0.3", "red-500"],
+  4: ["234,179,8,0.3", "yellow-500"],
+  5: ["234,179,8,0.3", "yellow-500"],
+  6: ["234,179,8,0.3", "yellow-500"],
+  7: ["34,197,94,0.3", "green-500"],
+  8: ["34,197,94,0.3", "green-500"],
+  9: ["34,197,94,0.3", "green-500"],
+  10: ["34,197,94,0.3", "green-500"],
 }
 
 const SkillTiles = () => {
@@ -129,7 +129,7 @@ const SkillTiles = () => {
           <div className="flex lg:justify-start md:justify-start justify-center lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
             Skills & Interests
           </div>
-          <div className="pt-4 flex space-x-5">
+          {/* <div className="pt-4 flex space-x-5">
             <div className="flex space-x-2 justify-start items-center">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div>Beginner</div>
@@ -142,7 +142,8 @@ const SkillTiles = () => {
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
               <div>Proficient</div>
             </div>
-          </div>
+          </div> */}
+          
           <div className="pt-2">
             {skillData.map((skillGroup, index) => (
               <>
@@ -151,13 +152,13 @@ const SkillTiles = () => {
                 <div className="text-xl">{skillGroup.type}</div>
                 <br />
                 <div
-                  className="grid grid-cols-2 text-red-500 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
                   key={index}
                 >
                   {skillGroup.icons.map((skill, index) => (
                     <Tilt>
                       <div
-                        className={`bg-default shadow-[0_0_15px_1px_rgba(0,0,0,1)] hover:shadow-[0_0_15px_1px_rgba(${levelToColor[skill.level]})] transition-all duration-350 ease-in-out rounded-lg p-2 w-fit h-fit`}
+                        className={`bg-default hover:bg-opacity-20 shadow-[0_0_15px_1px_rgba(0,0,0,1)] hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.3)] transition-all duration-350 ease-in-out rounded-lg p-2 w-fit h-fit`}
                         key={index}
                         title={skill.name}
                       >
