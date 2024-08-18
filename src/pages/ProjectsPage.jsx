@@ -6,7 +6,7 @@ import Garbage from "../assets/garbage_classification.png";
 import HVM from "../assets/hvm.png";
 import Trasheroo from "../assets/trasheroo.png";
 import Academize from "../assets/academize.jpeg";
-
+import Footer from "../components/Footer";
 const ProjectsPage = () => {
   const projects = [
     {
@@ -59,6 +59,7 @@ const ProjectsPage = () => {
   ];
   // const { image, title, description, date, techStack, github, link } = project;
   return (
+    <>
     <div className="min-h-screen max-w-6xl mx-auto py-44 px-4">
         <h1 className="lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
           Projects
@@ -76,6 +77,10 @@ const ProjectsPage = () => {
         <br />
         <br />
       </div>
+      <section>
+        <Footer />
+      </section>
+      </>
   );
 };
 

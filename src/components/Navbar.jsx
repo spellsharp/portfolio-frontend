@@ -72,9 +72,8 @@ const Navbar = () => {
     <nav className="absolute top-0 text-white font-bold w-full flex py-6 justify-between items-center navbar">
       <div>
         <Link to="/" className="nav-link">
-          <div className="ml-5 lg:text-4xl md:text-4xl sm:text-4xl text-4xl font-bold flex items-center">
-            <img src={Logo} alt="Logo" className="lg:w-12 lg:h-11 md:w-12 md:h-11 sm:w-12 sm:h-11 h-11 w-12  mb-1 -mr-1" />
-            haran<span className="ml-1 text-blue-500">.</span>
+          <div className="ml-5 lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold flex items-center">
+            Sharan<span className="ml-1 text-blue-500">.</span>
           </div>
         </Link>
       </div>

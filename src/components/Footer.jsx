@@ -7,7 +7,7 @@ import {
   BsTwitter,
   BsLinkedin,
 } from "react-icons/bs";
-import Logo from "../assets/SharanLogo.png";
+import { Link } from "react-router-dom";
 
 const FooterComponent = () => {
   return (
@@ -16,8 +16,7 @@ const FooterComponent = () => {
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <a href="/">
             <div className="text-xl font-bold flex">
-              <img src={Logo} alt="Logo" className="w-6 h-6" />
-              haran<span className="items-end ml-1 text-blue-500">.</span>
+              Sharan<span className="items-end ml-1 text-blue-500">.</span>
             </div>
           </a>
           <div className="mt-4 flex space-x-6 sm:mt-0 items-center text-3xl">
@@ -60,7 +59,7 @@ const FooterComponent = () => {
           </div>
         </div>
         <div className="w-full sm:flex sm:items-center sm:justify-between pt-5">
-          <p>Made by Shrisharanyan Vasu</p>
+          <div>Made by <Link href='/'><span className="text-blue-500 font-medium">Shrisharanyan Vasu</span></Link></div>
         </div>
       </div>
     </Footer>
