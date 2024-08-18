@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect/";
-import Sharan from "../assets/sharan.jpg";
+import Sharan from "../assets/sharan.jpeg"; /* Change to jpg */
 import DownloadCV from "../services/DownloadCV";
 import ImageBlob from "../components/ImageBlob";
 import { useEffect, useState } from "react";
