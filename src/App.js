@@ -20,7 +20,7 @@ const App = () => {
 
   const ResumeRedirect = () => {
     useEffect(() => {
-      window.location.href = "https://www.overleaf.com/project/660573df19b75ee01e84f206";
+      window.location.href = "https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f";
     }, []);
     
     return null;
