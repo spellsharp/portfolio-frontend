@@ -46,6 +46,10 @@ export const navLinks = [
   {
     id: "/wormhole",
     title: "Wormhole"
+  },
+  {
+    id: "/resume",
+    title: "Resume"
   }
 ];
 

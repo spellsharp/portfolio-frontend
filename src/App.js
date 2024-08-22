@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -17,6 +17,14 @@ const App = () => {
       setShowPage(true);
     }, 2000);
   }, []);
+
+  const ResumeRedirect = () => {
+    useEffect(() => {
+      window.location.href = "https://www.overleaf.com/project/660573df19b75ee01e84f206";
+    }, []);
+    
+    return null;
+  };
 
   return (
     <>
@@ -59,6 +67,14 @@ const App = () => {
                     <>
                       <Navbar />
                       <ContactPage />
+                    </>
+                  }
+                />
+                <Route
+                  path="/resume"
+                  element={
+                    <>
+                      <ResumeRedirect />
                     </>
                   }
                 />

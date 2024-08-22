@@ -24,12 +24,13 @@ const ContactPage = () => {
       <div className="flex flex-col text-center text-5xl items-center max-w-3xl">
         <div className="font-semibold">Let's work on something together!</div>
         <img src={Collaborate} alt="Collaborate" className="w-1/2" />
-        <button
-          onClick={() => DownloadCV()}
+        <a
+          href="https://www.overleaf.com/project/660573df19b75ee01e84f206"
+          target="_blank"
           className="sm:mx-auto mb-5 lg:mx-0 md:mx-0 mx-auto lg:p-3 lg:text-xl md:p-2 md:text-2xl sm:p-2 sm:text-xl max-w-fit p-2 text-xl shadow-[0_0_15px_1px_rgba(59,130,246,0.60)] border bg-blue-500 rounded-md border-white bg-opacity-0 lg:border-opacity-100 hover:bg-blue-500 hover:border-opacity-0 hover:transition-all duration-500 ease-in-out"
         >
           Curriculum Vitae
-        </button>
+        </a>
       </div>
       <div>
         <form className="max-w-2xl mx-auto border border-white border-opacity-10 p-10 rounded-xl m-2 shadow-[0_0_15px_1px_rgba(59,130,246,0.60)]">
