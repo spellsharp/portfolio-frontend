@@ -124,7 +124,7 @@ const levelToColor = {
 const SkillTiles = () => {
   return (
     <div>
-      <div className="min-h-[100vh] px-10 pt-10">
+      <div className="min-h-[100vh] pt-10">
         <div className="mx-auto max-w-5xl">
           <div className="flex lg:justify-start md:justify-start justify-center lg:text-4xl md:text-2xl sm:text-2xl text-2xl font-medium">
             Skills & Interests
@@ -152,7 +152,7 @@ const SkillTiles = () => {
                 <div className="text-xl">{skillGroup.type}</div>
                 <br />
                 <div
-                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-14"
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-16"
                   key={index}
                 >
                   {skillGroup.icons.map((skill, index) => (
