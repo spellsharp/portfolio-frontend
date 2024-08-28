@@ -5,7 +5,7 @@ import timelineData from '../content/timeline.json';
 
 const Parallax = () => {
   return (
-    <section className="flex flex-col items-center lg:justify-center md:justify-center sm:justify-start justify-start parallax parallax2">
+    <section className="flex flex-col items-center lg:justify-center md:justify-center sm:justify-start justify-start parallax parallax2 pb-10">
         <TimeLine data={timelineData} />
     </section>
   );

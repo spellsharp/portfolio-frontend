@@ -22,13 +22,13 @@
 
 @media screen and (max-width: 768px) {
     .parallax1 {
-        height: 12  0vh;
+        height: 120vh;
     }
     .parallax2 {
         height: 140vh;
     }
     .parallax3 {
-        height: 250vh;
+        height: 150vh;
     }
 }
 
