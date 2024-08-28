@@ -1,7 +1,7 @@
 import React from "react";
 import Collaborate from "../../assets/contact/collaboration.svg";
 
-import ContactSocialMediaHandles from "../../components/contact/ContactSocialMediaHandles";
+import SocialMediaHandles from "../../components/contact/SocialMediaHandles";
 
 const ContactPage = () => {
   return (
@@ -11,7 +11,7 @@ const ContactPage = () => {
         <div className="font-semibold">Let's work on something together!</div>
         <img src={Collaborate} alt="Collaborate" className="w-1/2" />
       </div>
-      <ContactSocialMediaHandles />
+      <SocialMediaHandles />
     </div>
   </>
   );

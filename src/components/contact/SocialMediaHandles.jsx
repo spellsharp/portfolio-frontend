@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaEnvelope, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaShareAlt, FaKaggle } from 'react-icons/fa'
 
-const ContactSocialMediaHandles = () => {
+const SocialMediaHandles = () => {
   return (
     <div className='flex flex-col space-y-10'>
         <div className="flex space-x-3 items-center">
@@ -36,6 +36,7 @@ const ContactSocialMediaHandles = () => {
         <a
           href="https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f"
           target="_blank"
+          rel='noreferrer'
           className="sm:mx-auto mb-5 lg:mx-0 md:mx-0 mx-auto lg:p-3 lg:text-xl md:p-2 md:text-2xl sm:p-2 sm:text-xl max-w-fit p-2 text-xl shadow-[0_0_15px_1px_rgba(59,130,246,0.60)] border bg-blue-500 rounded-md border-white bg-opacity-0 lg:border-opacity-100 hover:bg-blue-500 hover:border-opacity-0 hover:transition-all duration-500 ease-in-out"
         >
           Curriculum Vitae
@@ -44,4 +45,4 @@ const ContactSocialMediaHandles = () => {
   )
 }
 
-export default ContactSocialMediaHandles
+export default SocialMediaHandles

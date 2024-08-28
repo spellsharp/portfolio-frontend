@@ -1,14 +1,12 @@
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/misc/Navbar";
 import HomePage from "./pages/home/HomePage";
 import ProjectsPage from "./pages/projects/ProjectsPage";
-import "./App.css";
 import NotFoundPage from "./pages/notfound/NotFoundPage";
 import ContactPage from "./pages/contact/ContactPage";
 import AboutPage from "./pages/about/AboutPage";
-import PageTransition from "./components/misc/PageTransition";
-import { useState, useEffect } from "react";
 
 const getRandomPosition = (positions) => {
   const index = Math.floor(Math.random() * positions.length);
@@ -106,18 +104,9 @@ const AnimatedRoutes = () => {
   );
 };
 const App = () => {
-  const [showPage, setShowPage] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowPage(true);
-    }, 3000);
-  }, []);
-
   return (
     <div className="App">
       <Router>
-        {/* {showPage ? <AnimatedRoutes /> : <PageTransition />} */}
         <AnimatedRoutes />
       </Router>
     </div>
