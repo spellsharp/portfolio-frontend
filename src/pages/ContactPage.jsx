@@ -27,9 +27,6 @@ const ContactPage = () => {
       </div>
       <ContactSocialMediaHandles />
     </div>
-    <section>
-      <Footer />
-    </section>
   </>
   );
 };

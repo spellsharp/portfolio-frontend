@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaShareAlt } from 'react-icons/fa'
+import { FaEnvelope, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaShareAlt, FaKaggle } from 'react-icons/fa'
 
 const ContactSocialMediaHandles = () => {
   return (
@@ -24,6 +24,9 @@ const ContactSocialMediaHandles = () => {
                 </a>
                 <a href="https://linkedin.com/in/shrisharanyan" target="_blank" rel="noreferrer" className="text-4xl hover:text-blue-500 transition-all duration-500">
                     <FaLinkedin />
+                </a>
+                <a href="https://kaggle.com/spellsharp" target="_blank" rel="noreferrer" className="text-4xl hover:text-blue-500 transition-all duration-500">
+                    <FaKaggle />
                 </a>
                 <a href="https://github.com/spellsharp" target="_blank" rel="noreferrer" className="text-4xl hover:text-blue-500 transition-all duration-500">
                     <FaGithub />

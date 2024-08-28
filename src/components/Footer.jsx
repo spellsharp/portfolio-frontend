@@ -7,6 +7,7 @@ import {
   BsTwitter,
   BsLinkedin,
 } from "react-icons/bs";
+import { FaKaggle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const FooterComponent = () => {
@@ -49,6 +50,12 @@ const FooterComponent = () => {
               href="https://github.com/spellsharp"
               target="_blank"
               icon={BsGithub}
+            />
+            <Footer.Icon
+              className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
+              href="https://kaggle.com/spellsharp"
+              target="_blank"
+              icon={FaKaggle}
             />
             <Footer.Icon
               className="hover:text-blue-400 hover:transition-all duration-500 ease-in-out"
