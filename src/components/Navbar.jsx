@@ -30,26 +30,32 @@ export const navLinks = [
   {
     id: "/",
     title: "Home",
+    target: "_self"
   },
   {
     id: "/about",
     title: "About",
+    target: "_self"
   },
   {
     id: "/projects",
     title: "Projects",
+    target: "_self"
   },
   {
     id: "/contact",
     title: "Contact",
+    target: "_self"
   },
   {
     id: "/wormhole",
-    title: "Wormhole"
+    title: "Wormhole",
+    target: "_self"
   },
   {
-    id: "/resume",
-    title: "Resume"
+    id: "https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f",
+    title: "Resume",
+    target: "_blank"
   }
 ];
 
@@ -96,7 +102,7 @@ const Navbar = () => {
               } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500" : "mr-10"}`}
               onClick={() => {setActive(nav.title); setToggle(!toggle)}}
             >
-              <UnderlineLink className="hover:scale-x-110 duration-500 transition-all" href={`${nav.id}`}>{nav.title}</UnderlineLink>
+              <UnderlineLink className="hover:scale-x-110 duration-500 transition-all" target={nav.target} href={`${nav.id}`}>{nav.title}</UnderlineLink>
 
             </li>
           ))}

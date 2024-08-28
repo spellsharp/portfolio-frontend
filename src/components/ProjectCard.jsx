@@ -25,7 +25,7 @@ const ProjectCardBack = ({
   date,
   techStack,
   github,
-  link,
+  kaggle,
 }) => {
   return (
     <div className="h-80 rounded-md overflow-hidden border border-white border-opacity-10 shadow-black shadow-lg">
@@ -40,12 +40,12 @@ const ProjectCardBack = ({
         </p>
         <div className="flex justify-between mt-5">
           <a
-            href={github}
+            href={github !== "" ? github : kaggle}
             target="_blank"
             rel="noreferrer"
             className="text-white font-medium text-center hover:bg-blue-500 hover:bg-opacity-10 hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] rounded-full p-1 transition-all duration-300 ease-in-out"
           >
-            GitHub
+            {github !== "" ? "Github" : "Kaggle" }
           </a>
         </div>
       </div>
@@ -54,7 +54,7 @@ const ProjectCardBack = ({
 };
 
 const ProjectCard = ({ project }) => {
-  const { image, title, description, date, techStack, github } = project;
+  const { image, title, description, date, techStack, github, kaggle } = project;
 
   const [isFlipped, setIsFlipped] = React.useState(false);
 
@@ -75,6 +75,7 @@ const ProjectCard = ({ project }) => {
           date={date}
           techStack={techStack}
           github={github}
+          kaggle={kaggle}
         />
       </div>
     </ReactCardFlip>

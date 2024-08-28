@@ -8,10 +8,14 @@ html {
 .App {
   font-family: "Poppins";
   background-color: #151515;
-  /* min-height: 100vh; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url("assets/background.png");
   height: 100%;
   color: white;
-  /* cursor: url("assets/custom_cursor.png"), auto; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ::-webkit-scrollbar {

@@ -1,5 +1,4 @@
 import Sharan from "../assets/sharan_mic.jpg";
-import DownloadCV from "../services/DownloadCV";
 import ImageBlob from "../components/ImageBlob";
 import Footer from "../components/Footer";
 

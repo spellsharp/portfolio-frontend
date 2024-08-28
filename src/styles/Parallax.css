@@ -12,12 +12,12 @@
 
 .parallax2 {
     height: 130vh;
-    background-image: url('../assets/education.png');
+    background-image: url('../assets/education.png'), rgba(0, 0, 0, 0);
 }
 
 .parallax3 {
     height: 130vh;
-    background-image: url('../assets/skills.png');
+    background-image: url('../assets/skills.png'), rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 768px) {

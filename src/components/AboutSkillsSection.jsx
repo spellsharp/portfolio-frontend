@@ -4,9 +4,11 @@ import SkillTiles from './SkillTiles'
 
 const Parallax = () => {
   return (
-    <section className="flex flex-col items-center lg:justify-center md:justify-center sm:justify-start justify-start parallax parallax3">
+    <div className='flex items-center justify-center'>
+    <section className="flex flex-col items-start lg:justify-center md:justify-center sm:justify-start justify-start parallax parallax3">
         <SkillTiles />
     </section>
+    </div>
   );
 };
 

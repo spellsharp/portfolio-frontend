@@ -4,7 +4,7 @@ import { FaEnvelope, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaShareAlt, F
 const ContactSocialMediaHandles = () => {
   return (
     <div className='flex flex-col space-y-10'>
-        <div className="flex space-x-3 justify-center items-center">
+        <div className="flex space-x-3 items-center">
             <a href="mailto:shrisharanyan.vasu@gmail.com" target="_blank" rel="noreferrer" className="text-4xl text-blue-500">
                 <FaEnvelope />
             </a>

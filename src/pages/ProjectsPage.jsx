@@ -5,10 +5,19 @@ import Lane from "../assets/lane_detection.jpeg";
 import Garbage from "../assets/garbage_classification.png";
 import HVM from "../assets/hvm.png";
 import Trasheroo from "../assets/trasheroo.png";
-import Academize from "../assets/academize.jpeg";
+import FETA from "../assets/FETA.png";
 import Footer from "../components/Footer";
 const ProjectsPage = () => {
   const projects = [
+    {
+      title: "Fetal Brain Segmentation",
+      date: "Current",
+      description: "A fetal brain segmentation model using different variants of U-Net.",
+      image: FETA,
+      techStack: "PyTorch, MONAI, Numpy, Matplotlib",
+      github: "",
+      kaggle: "https://kaggle.com/code/spellsharp/feta-challenge-2024"
+    },
     {
       title: "Portfolio",
       date: "July 2024",
@@ -16,6 +25,7 @@ const ProjectsPage = () => {
       image: Portfolio,
       techStack: "React, Tailwindcss",
       github: "https://github.com/spellsharp/portfolio-frontend",
+      kaggle: "",
     },
     {
       title: "Autonomous Driver Assistance",
@@ -24,6 +34,7 @@ const ProjectsPage = () => {
       image: Lane,
       techStack: "OpenCV, YOLO, Tesseract, GANs",
       github: "https://github.com/spellsharp/Synapse2.0",
+      kaggle: "",
     },
     {
       title: "Garbage Classification",
@@ -31,6 +42,8 @@ const ProjectsPage = () => {
       description: "A garbage classification system that classifies garbage into a number of categories.",
       image: Garbage,
       techStack: "OpenCV, YOLO, PyTorch",
+      github: "https://github.com/spellsharp/Waste-Detection-and-Classification",
+      kaggle: "",
     },
     {
       title: "Hospital Visitor Management",
@@ -39,6 +52,7 @@ const ProjectsPage = () => {
       image: HVM,
       techStack: "React, Node.js, Django",
       github: "https://github.com/spellsharp/HVM_Backend",
+      kaggle: "",
     },
     {
       title: "Trasheroo",
@@ -46,18 +60,19 @@ const ProjectsPage = () => {
       description: "A mobile app that enables users to volunteer for garbage collection drives.",
       image: Trasheroo,
       techStack: "Flutter, Firebase",
-      github: "https://github.com/spellsharp/Trasheroo"
+      github: "https://github.com/spellsharp/Trasheroo",
+      kaggle: "",
     },
-    {
-      title: "Academize",
-      date: "February 2023",
-      description: "A platform that helps teachers keep track of their students' academic progress.",
-      image: Academize,
-      github: "https://github.com/spellsharp/progress_tracker",
-      techStack: "React, Node.js, Django"
-    }
+    // {
+    //   title: "Academize",
+    //   date: "February 2023",
+    //   description: "A platform that helps teachers keep track of their students' academic progress.",
+    //   image: Academize,
+    //   github: "https://github.com/spellsharp/progress_tracker",
+    //   techStack: "React, Node.js, Django"
+    // }
   ];
-  // const { image, title, description, date, techStack, github, link } = project;
+
   return (
     <>
     <div className="min-h-screen max-w-6xl mx-auto py-44 px-4">

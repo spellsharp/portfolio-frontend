@@ -22,7 +22,7 @@ import { Tilt } from "react-tilt";
 
 const skillData = [
   {
-    type: "Machine Learning",
+    type: "Deep Learning",
     icons: [
       {
         name: "PyTorch",
@@ -152,7 +152,7 @@ const SkillTiles = () => {
                 <div className="text-xl">{skillGroup.type}</div>
                 <br />
                 <div
-                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-14"
                   key={index}
                 >
                   {skillGroup.icons.map((skill, index) => (
