@@ -10,13 +10,13 @@ const AboutPage = () => {
       <section>
         <AboutHeroSection />
       </section>
-
-      <section>
-        <AboutEducationSection />
-      </section>
-
+      
       <section>
         <AboutSkillsSection />
+      </section>
+      
+      <section>
+        <AboutEducationSection />
       </section>
     </div>
   );
