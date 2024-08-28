@@ -1,12 +1,12 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard";
-import Portfolio from "../assets/Portfolio.png";
-import Lane from "../assets/lane_detection.jpeg";
-import Garbage from "../assets/garbage_classification.png";
-import HVM from "../assets/hvm.png";
-import Trasheroo from "../assets/trasheroo.png";
-import FETA from "../assets/FETA.png";
-import Footer from "../components/Footer";
+import ProjectCard from "../../components/projects/ProjectCard";
+import Portfolio from "../../assets/projects/Portfolio.png";
+import Lane from "../../assets/projects/lane_detection.jpeg";
+import Garbage from "../../assets/projects/garbage_classification.png";
+import HVM from "../../assets/projects/hvm.png";
+import Trasheroo from "../../assets/projects/trasheroo.png";
+import FETA from "../../assets/projects/FETA.png";
+import Footer from "../../components/misc/Footer";
 const ProjectsPage = () => {
   const projects = [
     {

@@ -6,14 +6,12 @@ import {
   Css3Original,
   JavascriptOriginal,
   PytorchOriginal,
-  TensorflowOriginal,
   FlaskOriginal,
   PythonOriginal,
   DjangoPlain,
   ReactOriginal,
   PandasOriginal,
   NumpyOriginal,
-  KerasOriginal,
   ScikitlearnOriginal,
   OpencvOriginal,
 } from "devicons-react";
@@ -108,18 +106,18 @@ const skillData = [
   },
 ];
 
-const levelToColor = {
-  1: ["239,68,68,0.3", "red-500"],
-  2: ["239,68,68,0.3", "red-500"],
-  3: ["239,68,68,0.3", "red-500"],
-  4: ["234,179,8,0.3", "yellow-500"],
-  5: ["234,179,8,0.3", "yellow-500"],
-  6: ["234,179,8,0.3", "yellow-500"],
-  7: ["34,197,94,0.3", "green-500"],
-  8: ["34,197,94,0.3", "green-500"],
-  9: ["34,197,94,0.3", "green-500"],
-  10: ["34,197,94,0.3", "green-500"],
-}
+// const levelToColor = {
+//   1: ["239,68,68,0.3", "red-500"],
+//   2: ["239,68,68,0.3", "red-500"],
+//   3: ["239,68,68,0.3", "red-500"],
+//   4: ["234,179,8,0.3", "yellow-500"],
+//   5: ["234,179,8,0.3", "yellow-500"],
+//   6: ["234,179,8,0.3", "yellow-500"],
+//   7: ["34,197,94,0.3", "green-500"],
+//   8: ["34,197,94,0.3", "green-500"],
+//   9: ["34,197,94,0.3", "green-500"],
+//   10: ["34,197,94,0.3", "green-500"],
+// }
 
 const SkillTiles = () => {
   return (

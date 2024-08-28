@@ -1,8 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import Collaborate from "../assets/collaboration.svg";
-import Footer from "../components/Footer";
-import ContactSocialMediaHandles from "../components/ContactSocialMediaHandles";
+import Collaborate from "../../assets/contact/collaboration.svg";
+
+import ContactSocialMediaHandles from "../../components/contact/ContactSocialMediaHandles";
 
 const ContactPage = () => {
   return (

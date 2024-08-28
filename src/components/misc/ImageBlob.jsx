@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/ImageBlob.css'; // Import the CSS file
+import '../../styles/ImageBlob.css'; // Import the CSS file
 
 const ImageBlob = ({ src }) => {
   const [coordinates, setCoordinates] = useState('50% 50% 50% 50% / 50% 50% 50% 50%');

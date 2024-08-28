@@ -7,28 +7,12 @@
 }
   
 .parallax1 {
-    background-image: url('../assets/about_collage.png'); 
-}
-
-.parallax2 {
-    height: 130vh;
-    background-image: url('../assets/education.png'), rgba(0, 0, 0, 0);
-}
-
-.parallax3 {
-    height: 130vh;
-    background-image: url('../assets/skills.png'), rgba(0, 0, 0, 0.3);
+    background-image: url('../assets/about/about_collage.png');
 }
 
 @media screen and (max-width: 768px) {
     .parallax1 {
         height: 120vh;
-    }
-    .parallax2 {
-        height: 140vh;
-    }
-    .parallax3 {
-        height: 150vh;
     }
 }
 

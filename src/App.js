@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Navbar from "./components/Navbar";
-import HomePage from "./pages/HomePage";
-import ProjectsPage from "./pages/ProjectsPage";
+import Navbar from "./components/misc/Navbar";
+import HomePage from "./pages/home/HomePage";
+import ProjectsPage from "./pages/projects/ProjectsPage";
 import "./App.css";
-import NotFoundPage from "./pages/NotFoundPage";
-import ContactPage from "./pages/ContactPage";
-import AboutPage from "./pages/AboutPage";
-import PageTransition from "./components/PageTransition";
+import NotFoundPage from "./pages/notfound/NotFoundPage";
+import ContactPage from "./pages/contact/ContactPage";
+import AboutPage from "./pages/about/AboutPage";
+import PageTransition from "./components/misc/PageTransition";
 import { useState, useEffect } from "react";
 
 const getRandomPosition = (positions) => {

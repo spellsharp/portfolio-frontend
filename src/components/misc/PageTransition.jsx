@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/PageTransition.css";
+import "../../styles/PageTransition.css";
 
 function PageTransition() {
   return (

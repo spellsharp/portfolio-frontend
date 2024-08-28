@@ -1,6 +1,6 @@
-import Sharan from "../assets/sharan_mic.jpg";
-import ImageBlob from "../components/ImageBlob";
-import Footer from "../components/Footer";
+import Sharan from "../../assets/home/sharan_mic.jpg";
+import ImageBlob from "../../components/misc/ImageBlob";
+import Footer from "../../components/misc/Footer";
 
 const HomePage = () => {
   return (

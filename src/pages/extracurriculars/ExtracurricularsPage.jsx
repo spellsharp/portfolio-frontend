@@ -1,3 +1,7 @@
+/*
+ This page is not in use as of now. It will be used to display the extracurriculars later.
+*/
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
@@ -31,11 +35,11 @@ const ExtracurricularsPage = ({ tag = "Music" }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           {extracurriculars.map((extracurricular) => (
             <div key={extracurricular.id}>
-              <ProjectCard
+              {/* <ProjectCard
                 image={extracurricular.image}
                 title={extracurricular.title}
                 description={extracurricular.description}
-              />
+              /> */}
             </div>
           ))}
         </div>
