@@ -53,7 +53,7 @@ export const navLinks = [
   },
   {
     id: "https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f",
-    title: "Resume",
+    title: "Résumé",
     target: "_blank"
   }
 ];
