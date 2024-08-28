@@ -76,7 +76,7 @@ const Navbar = () => {
     <nav className="absolute top-0 text-white font-bold w-full flex py-6 justify-between items-center navbar">
       <div>
         <Link to="/" className="nav-link">
-          <div className="ml-5 lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold flex items-center">
+          <div className="ml-5 lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold flex items-center tracking-wide">
             Sharan<span className="ml-1 text-blue-500">.</span>
           </div>
         </Link>
@@ -96,10 +96,7 @@ const Navbar = () => {
               } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500" : "mr-10"}`}
               onClick={() => {setActive(nav.title); setToggle(!toggle)}}
             >
-              {/* <Link to={`${nav.id}`} className="nav-link">
-                {`${nav.title}`}
-              </Link> */}
-              <UnderlineLink href={`${nav.id}`}>{nav.title}</UnderlineLink>
+              <UnderlineLink className="hover:scale-x-110 duration-500 transition-all" href={`${nav.id}`}>{nav.title}</UnderlineLink>
 
             </li>
           ))}

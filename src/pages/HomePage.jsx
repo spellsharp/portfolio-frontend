@@ -6,18 +6,18 @@ import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen ">
+      <div className="flex items-center justify-center min-h-screen px-2">
         <section className="flex drop-shadow-lg mt-20">
           <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col mx-auto items-center lg:space-x-12 md:space-x-12 sm:space-x-0 space-x-0">
             <div className="w-auto">
-              <div className="mx-auto px-32">
+              <div className="mx-auto lg:px-32 md:px-32 sm:px-0 px-0">
                 <ImageBlob src={Sharan} />
               </div>
             </div>
             <div className="lg:text-left md:text-center sm:text-center text-center px-5">
               <br />
-              <div className="lg:text-6xl md:text-6xl sm:text-4xl text-3xl font-semibold mb-2">Welcome to my Portfolio</div> 
-              <div className="lg:text-2xl md:text-2xl sm:text-lg text-sm">I'm a passionate student of ML & Data Science. But I also delve in web development. This is one such side-quest ;)</div>
+              <div className="lg:text-6xl md:text-6xl sm:text-2xl text-2xl font-semibold mb-2">Welcome to my Portfolio</div> 
+              <div className="lg:text-2xl md:text-2xl sm:text-sm text-sm lg:max-w-3xl md:max-w-2xl sm:max-w-xs max-w-xs">I'm a passionate student of ML & Data Science. But I also delve in web development. This is one such side-quest ;)</div>
               <div className="flex flex-col justify-center lg:justify-start lg:flex-row md:flex-row sm:flex-col py-5">
                 <a
                   href="/about"

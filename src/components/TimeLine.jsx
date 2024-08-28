@@ -23,8 +23,8 @@ export default function BasicTimeline({ data }) {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <div className="border border-white bg-black bg-opacity-50 border-opacity-10 rounded-md p-5 shadow-[0_0_15px_1px_rgba(255,255,255,0.30)]">
-                      <div className="lg:text-3xl md:text-xl sm:text-lg text-lg font-semibold font-poppins">
+                    <div className="hover:scale-x-105 transition-all duration-500 border border-white bg-black bg-opacity-50 border-opacity-10 rounded-md p-5 shadow-[0_0_15px_1px_rgba(255,255,255,0.30)] font-poppins">
+                      <div className="lg:text-3xl md:text-xl sm:text-lg text-lg font-semibold">
                         {item.title}
                       </div>
                       <div>{item.date}</div>
