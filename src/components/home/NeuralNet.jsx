@@ -103,7 +103,11 @@ const NeuralNet = () => {
     const wrap = wrapRef.current;
     if (!canvas || !wrap) return;
 
+    // Null in environments without canvas support (and under jsdom in tests);
+    // bail out rather than taking the page down with it.
     const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
     let theme = readTheme(wrap);
     let raf = 0;
     let w = 0;
