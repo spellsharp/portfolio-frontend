@@ -92,7 +92,10 @@ export const research = [
     tags: ["Neural operators", "Scientific ML", "Open source", "PyTorch"],
     links: [
       { label: "DeepChem", href: "https://github.com/deepchem/deepchem" },
-      { label: "GSoC 2025", href: "https://summerofcode.withgoogle.com/" },
+      {
+        label: "GSoC 2025 project",
+        href: "https://summerofcode.withgoogle.com/archive/2025/projects/pCUg5nMr",
+      },
     ],
   },
 ];
