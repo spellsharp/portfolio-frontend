@@ -90,7 +90,20 @@ const HomePage = () => (
           <div key={e.org}>
             <div className="font-mono text-xs text-faint">{e.period}</div>
             <h3 className="mt-2 text-lg">{e.role}</h3>
-            <div className="text-[15px] text-accent">{e.org}</div>
+            <div className="text-[15px] text-accent">
+              {e.orgUrl ? (
+                <a
+                  href={e.orgUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
+                >
+                  {e.org}
+                </a>
+              ) : (
+                e.org
+              )}
+            </div>
             <p className="mt-2 text-[15px] text-muted">{e.detail}</p>
           </div>
         ))}

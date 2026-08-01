@@ -25,11 +25,11 @@ export const profile = {
     "I'm a healthcare AI engineer at MaitriLabs, where I work on machine learning for clinical imaging. Most of my time goes to problems where the model has to hold up against messy, low-volume, expert-annotated medical data rather than clean benchmarks.",
     "So far that has taken me across cardiology — congenital heart disease classification and cardiac structure segmentation — and gastroenterology, grading ulcerative colitis severity from endoscopic imaging. I'm not tied to one clinical domain; what carries over between them is the methodology, and the fact that calibration and failure behaviour matter as much as headline accuracy.",
     "Alongside the clinical work, I care about the scientific ML tooling underneath it. In Google Summer of Code 2025 I implemented the Fourier Neural Operator and integrated it into DeepChem, an open-source library used widely across computational chemistry and the life sciences.",
-    "I contribute to the MONAI Ultrasound Working Group, where a recent collaboration led to a paper at the ASMUS workshop at MICCAI. My work has also appeared at STACOM, MICCAI's workshop on statistical atlases and computational modelling of the heart. Working in the open, on shared infrastructure that other groups build clinical research on, is the part of this field I find most worth the effort.",
+    "I contribute to Project MONAI's Ultrasound Working Group, where a recent collaboration led to a paper at the ASMUS workshop at MICCAI. My work has also appeared at STACOM, MICCAI's workshop on statistical atlases and computational modelling of the heart. Working in the open, on shared infrastructure that other groups build clinical research on, is the part of this field I find most worth the effort.",
   ],
   interests: [
     "Medical image segmentation",
-    "Ultrasound / MONAI",
+    "Ultrasound / Project MONAI",
     "Clinical model evaluation & calibration",
     "Neural operators / scientific ML",
     "Open-source research tooling",
@@ -111,7 +111,7 @@ export const publications = [
     authors: "",
     venue: "ASMUS Workshop, MICCAI",
     year: "",
-    note: "Collaboration through the MONAI Ultrasound Working Group.",
+    note: "Collaboration through the Project MONAI Ultrasound Working Group.",
     links: [],
   },
   {
@@ -127,10 +127,11 @@ export const publications = [
 export const experience = [
   {
     role: "Contributor",
-    org: "MONAI Ultrasound Working Group",
+    org: "Project MONAI — Ultrasound Working Group",
+    orgUrl: "https://project-monai.github.io/",
     period: "2025 — present",
     detail:
-      "Contributing to open-source ultrasound tooling in MONAI; collaborative work published at the ASMUS workshop at MICCAI.",
+      "Contributing to open-source ultrasound tooling in Project MONAI; collaborative work published at the ASMUS workshop at MICCAI.",
   },
   {
     role: "Healthcare AI Engineer",
@@ -173,7 +174,7 @@ export const skills = [
     group: "Modelling",
     items: [
       "PyTorch",
-      "MONAI",
+      "Project MONAI",
       "Segmentation (U-Net, VNet, SwinUNETR)",
       "Neural operators",
       "Vision transformers",

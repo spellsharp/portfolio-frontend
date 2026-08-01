@@ -7,12 +7,25 @@ import {
   beyond,
 } from "../../content/site";
 
-const Entry = ({ primary, secondary, period, detail }) => (
+const Entry = ({ primary, secondary, secondaryUrl, period, detail }) => (
   <div className="grid gap-1 border-b border-rule-soft py-6 md:grid-cols-[130px_1fr] md:gap-8">
     <div className="pt-1 font-mono text-xs text-faint">{period}</div>
     <div>
       <h3 className="text-lg">{primary}</h3>
-      <div className="text-[15px] text-accent">{secondary}</div>
+      <div className="text-[15px] text-accent">
+        {secondaryUrl ? (
+          <a
+            href={secondaryUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
+          >
+            {secondary}
+          </a>
+        ) : (
+          secondary
+        )}
+      </div>
       {detail && <p className="mt-2 max-w-prose text-[15px] text-muted">{detail}</p>}
     </div>
   </div>
@@ -47,6 +60,7 @@ const AboutPage = () => (
             key={`${e.org}-${e.role}`}
             primary={e.role}
             secondary={e.org}
+            secondaryUrl={e.orgUrl}
             period={e.period}
             detail={e.detail}
           />
