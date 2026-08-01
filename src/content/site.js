@@ -109,7 +109,8 @@ export const publications = [
   {
     title:
       "Global to Local Registration: Transferring Pretrained Registration Models to CT/MR–Ultrasound via Anatomical Supervision",
-    authors: "",
+    authors:
+      "Gabriella d'Albenzio, Mengting Liu, Shixing Ma, Chunna Yang, Yuhao Wei, Shrisharanyan Vasu, Aniketh Vijesh, Xihan Ma, Zachary P. Taylor, Tanmoy Sarkar Pias, Basar Demir, Miklós Gyöngy, Yasin Ceran, Marc Niethammer, Stephen R. Aylward, Tina Kapur, Gabor Fichtinger, Zhe Min, Mirabela Rusu",
     venue: "ASMUS Workshop, MICCAI",
     year: "",
     note: "Collaboration through the Project MONAI Ultrasound Working Group.",
@@ -118,7 +119,9 @@ export const publications = [
   {
     title:
       "Beyond In-Distribution Metrics: A Systematic Out-of-Distribution Evaluation of Congenital Heart Disease Segmentation",
-    authors: "",
+    authors:
+      "Aniketh Vijesh, Shrisharanyan Vasu, Abhijit Ramesh, Clare Pomeroy-Ward, Harikrishnan Anil Maya, Sarin Xavier, Mahesh Kappanayil, Gilad Gressel",
+    equalContribution: ["Aniketh Vijesh", "Shrisharanyan Vasu"],
     venue: "STACOM Workshop, MICCAI",
     year: "",
     note: "",

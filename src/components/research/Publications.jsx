@@ -1,6 +1,38 @@
 import Icon from "../misc/Icons";
 import { Section } from "../misc/Layout";
-import { publications } from "../../content/site";
+import { publications, profile } from "../../content/site";
+
+/**
+ * Renders the author list with the site owner emphasised and any equal-first
+ * authors marked, per the usual convention on academic pages.
+ */
+const AuthorList = ({ authors, equalContribution = [] }) => {
+  const names = authors.split(",").map((n) => n.trim());
+  const marked = equalContribution.length > 0;
+
+  return (
+    <>
+      <p className="mt-2 max-w-prose text-[15px] text-muted">
+        {names.map((name, i) => (
+          <span key={name}>
+            <span className={name === profile.name ? "font-medium text-ink" : ""}>
+              {name}
+            </span>
+            {equalContribution.includes(name) && (
+              <sup className="text-accent">*</sup>
+            )}
+            {i < names.length - 1 && ", "}
+          </span>
+        ))}
+      </p>
+      {marked && (
+        <p className="mt-1 text-sm text-faint">
+          <span className="text-accent">*</span> Equal contribution.
+        </p>
+      )}
+    </>
+  );
+};
 
 /**
  * Renders only entries that actually have a title, so an incomplete citation
@@ -17,9 +49,10 @@ const Publications = () => {
           <li key={p.title} className="border-b border-rule-soft py-6">
             <h3 className="max-w-prose text-lg leading-snug">{p.title}</h3>
             {p.authors && (
-              <p className="mt-2 max-w-prose text-[15px] text-muted">
-                {p.authors}
-              </p>
+              <AuthorList
+                authors={p.authors}
+                equalContribution={p.equalContribution}
+              />
             )}
             <p className="mt-1 text-[15px] text-accent">
               {p.venue}
