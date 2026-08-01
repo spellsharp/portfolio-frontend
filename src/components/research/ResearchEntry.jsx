@@ -6,7 +6,9 @@ const ResearchEntry = ({ item }) => (
     id={item.slug}
     className="grid scroll-mt-24 gap-8 border-b border-rule-soft py-12 md:grid-cols-[300px_1fr] md:gap-12"
   >
-    <div className="overflow-hidden rounded-md border border-rule">
+    {/* self-start stops the frame stretching to the height of the text column,
+        which would leave dead space under the image. */}
+    <div className="self-start overflow-hidden rounded-md border border-rule">
       <div
         className={`aspect-[4/3] ${
           item.imageFit === "contain" ? "bg-white p-6" : ""
