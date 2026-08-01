@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Container, Section } from "../../components/misc/Layout";
 import Icon from "../../components/misc/Icons";
 import { PortraitPlaceholder } from "../../components/misc/Placeholder";
+import NeuralNet from "../../components/home/NeuralNet";
 import { profile, research, experience } from "../../content/site";
 
 const HomePage = () => (
@@ -56,6 +57,8 @@ const HomePage = () => (
         </div>
       </div>
     </section>
+
+    <NeuralNet />
 
     {/* Selected work */}
     <Section title="Selected work">
