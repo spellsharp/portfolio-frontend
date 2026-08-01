@@ -68,23 +68,31 @@ const AboutPage = () => (
     </Section>
 
     <Section title="Beyond research">
-      <h3 className="mb-5 text-2xl">{beyond.title}</h3>
-      <div className="max-w-prose space-y-5 text-[17px] text-muted">
-        {beyond.body.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
-      </div>
-      <dl className="mt-8 border-t border-rule-soft">
-        {beyond.highlights.map((h) => (
-          <div
-            key={h.label}
-            className="grid gap-1 border-b border-rule-soft py-4 md:grid-cols-[260px_1fr] md:gap-8"
-          >
-            <dt className="text-[15px] text-ink">{h.label}</dt>
-            <dd className="text-[15px] text-muted">{h.detail}</dd>
+      <div className="space-y-14">
+        {beyond.map((entry) => (
+          <div key={entry.title}>
+            <h3 className="mb-5 text-2xl">{entry.title}</h3>
+            <div className="max-w-prose space-y-5 text-[17px] text-muted">
+              {entry.body.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            {entry.highlights.length > 0 && (
+              <dl className="mt-8 border-t border-rule-soft">
+                {entry.highlights.map((h) => (
+                  <div
+                    key={h.label}
+                    className="grid gap-1 border-b border-rule-soft py-4 md:grid-cols-[260px_1fr] md:gap-8"
+                  >
+                    <dt className="text-[15px] text-ink">{h.label}</dt>
+                    <dd className="text-[15px] text-muted">{h.detail}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
           </div>
         ))}
-      </dl>
+      </div>
     </Section>
 
     <Section title="Technical">

@@ -181,28 +181,37 @@ export const skills = [
  * Life outside the lab. Kept factual and achievement-led rather than
  * devotional — this reads to a technical audience.
  */
-export const beyond = {
-  title: "Carnatic music",
-  body: [
-    "I'm a performing Carnatic vocalist. I train under Vidwan Sri Palghat Ramprasad in concert performance and vocal health technique, and continue to learn from his senior disciple Sri Rohith Chandrasekhar.",
-    "Over the past few years I've accompanied my teacher as vocal support across India and abroad, and presented concerts in and beyond Chennai. The discipline transfers in both directions, between the music and the research.",
-  ],
-  highlights: [
-    {
-      label: "Vocal support, international",
-      detail:
-        "Madhuradhwani · SASTRA Satsangh · Surabharati Sanskrit Foundation · Karpahavalli, Australia",
-    },
-    {
-      label: "Concerts",
-      detail: "Sarvani Sangeetha Sabha · Margazhi Sangeetha Upasana",
-    },
-    {
-      label: "Young Indian Cultural Ambassador (YICA)",
-      detail: "Birmingham Tyagaraja Festival, 2026",
-    },
-  ],
-};
+export const beyond = [
+  {
+    title: "Carnatic music",
+    body: [
+      "I'm a performing Carnatic vocalist. I train under Vidwan Sri Palghat Ramprasad in concert performance and vocal health technique, and continue to learn from his senior disciple Sri Rohith Chandrasekhar.",
+      "Over the past few years I've accompanied my teacher as vocal support across India and abroad, and presented concerts in and beyond Chennai. The discipline transfers in both directions, between the music and the research.",
+    ],
+    highlights: [
+      {
+        label: "Vocal support, international",
+        detail:
+          "Madhuradhwani · SASTRA Satsangh · Surabharati Sanskrit Foundation · Karpahavalli, Australia",
+      },
+      {
+        label: "Concerts",
+        detail: "Sarvani Sangeetha Sabha · Margazhi Sangeetha Upasana",
+      },
+      {
+        label: "Young Indian Cultural Ambassador (YICA)",
+        detail: "Birmingham Tyagaraja Festival, 2026",
+      },
+    ],
+  },
+  {
+    title: "Hobbies",
+    body: [
+      "Mostly games. I'm drawn to long-form, atmospheric worlds — Elden Ring, Red Dead Redemption 2, The Witcher 3 — and to indie games that do a great deal with very little: INSIDE, Hollow Knight, Dead Cells.",
+    ],
+    highlights: [],
+  },
+];
 
 export const socials = [
   { label: "Email", href: "mailto:shrisharanyan.vasu@gmail.com", icon: "mail" },
