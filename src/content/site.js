@@ -152,11 +152,12 @@ export const experience = [
       "Implemented the Fourier Neural Operator and integrated it into DeepChem's model library, with tests and documentation.",
   },
   {
-    role: "Member",
+    role: "Alumni Member",
     org: "amFOSS",
+    orgUrl: "https://amfoss.in/",
     period: "2023 — 2026",
     detail:
-      "Active member of one of India's leading free and open-source software clubs; project work, mentoring and event organisation.",
+      "Student-run free and open-source software club at Amrita Vishwa Vidyapeetham, and one of India's most active; project work, mentoring and event organisation.",
   },
 ];
 
