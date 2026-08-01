@@ -10,7 +10,7 @@ import gsocLogo from "../assets/research/gsoc.png";
 export const profile = {
   name: "Shrisharanyan Vasu",
   short: "Sharan",
-  role: "Healthcare AI Engineer",
+  role: "Deep Learning Researcher — Healthcare",
   org: "MaitriLabs",
   orgUrl: "",
   location: "India",
@@ -22,7 +22,7 @@ export const profile = {
   tagline:
     "I build machine learning systems for medicine, and the open scientific ML infrastructure they run on — mostly where data is scarce, labels come from experts, and being wrong carries a cost.",
   bio: [
-    "I'm a healthcare AI engineer at MaitriLabs, where I work on machine learning for clinical imaging. Most of my time goes to problems where the model has to hold up against messy, low-volume, expert-annotated medical data rather than clean benchmarks.",
+    "I'm a deep learning researcher at MaitriLabs, working on machine learning for clinical imaging. Most of my time goes to problems where the model has to hold up against messy, low-volume, expert-annotated medical data rather than clean benchmarks.",
     "So far that has taken me across cardiology — congenital heart disease classification and cardiac structure segmentation — and gastroenterology, grading ulcerative colitis severity from endoscopic imaging. I'm not tied to one clinical domain; what carries over between them is the methodology, and the fact that calibration and failure behaviour matter as much as headline accuracy.",
     "Alongside the clinical work, I care about the scientific ML tooling underneath it. In Google Summer of Code 2025 I implemented the Fourier Neural Operator and integrated it into DeepChem, an open-source library used widely across computational chemistry and the life sciences.",
     "I contribute to Project MONAI's Ultrasound Working Group, where a recent collaboration led to a paper at the ASMUS workshop at MICCAI. My work has also appeared at STACOM, MICCAI's workshop on statistical atlases and computational modelling of the heart. Working in the open, on shared infrastructure that other groups build clinical research on, is the part of this field I find most worth the effort.",
@@ -131,19 +131,19 @@ export const publications = [
 
 export const experience = [
   {
+    role: "Deep Learning Researcher — Healthcare",
+    org: "MaitriLabs",
+    period: "2025 — present",
+    detail:
+      "Machine learning for clinical imaging — congenital heart disease classification, cardiac segmentation, and ulcerative colitis severity grading.",
+  },
+  {
     role: "Contributor",
     org: "Project MONAI — Ultrasound Working Group",
     orgUrl: "https://project-monai.github.io/",
     period: "2025 — present",
     detail:
       "Contributing to open-source ultrasound tooling in Project MONAI; collaborative work published at the ASMUS workshop at MICCAI.",
-  },
-  {
-    role: "Healthcare AI Engineer",
-    org: "MaitriLabs",
-    period: "2025 — present",
-    detail:
-      "Machine learning for clinical imaging — congenital heart disease classification, cardiac segmentation, and ulcerative colitis severity grading.",
   },
   {
     role: "Open Source Contributor",
