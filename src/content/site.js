@@ -208,6 +208,7 @@ export const beyond = [
     title: "Hobbies",
     body: [
       "Mostly games. I'm drawn to long-form, atmospheric worlds — Elden Ring, Red Dead Redemption 2, The Witcher 3 — and to indie games that do a great deal with very little: INSIDE, Hollow Knight, Dead Cells.",
+      "The rest of my time outside work goes to the gym.",
     ],
     highlights: [],
   },
