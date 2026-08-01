@@ -1,5 +1,11 @@
 import { Container, PageHeader, Section } from "../../components/misc/Layout";
-import { profile, experience, education, skills } from "../../content/site";
+import {
+  profile,
+  experience,
+  education,
+  skills,
+  beyond,
+} from "../../content/site";
 
 const Entry = ({ primary, secondary, period, detail }) => (
   <div className="grid gap-1 border-b border-rule-soft py-6 md:grid-cols-[130px_1fr] md:gap-8">
@@ -59,6 +65,26 @@ const AboutPage = () => (
           />
         ))}
       </div>
+    </Section>
+
+    <Section title="Beyond research">
+      <h3 className="mb-5 text-2xl">{beyond.title}</h3>
+      <div className="max-w-prose space-y-5 text-[17px] text-muted">
+        {beyond.body.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
+      </div>
+      <dl className="mt-8 border-t border-rule-soft">
+        {beyond.highlights.map((h) => (
+          <div
+            key={h.label}
+            className="grid gap-1 border-b border-rule-soft py-4 md:grid-cols-[260px_1fr] md:gap-8"
+          >
+            <dt className="text-[15px] text-ink">{h.label}</dt>
+            <dd className="text-[15px] text-muted">{h.detail}</dd>
+          </div>
+        ))}
+      </dl>
     </Section>
 
     <Section title="Technical">

@@ -177,6 +177,33 @@ export const skills = [
   },
 ];
 
+/**
+ * Life outside the lab. Kept factual and achievement-led rather than
+ * devotional — this reads to a technical audience.
+ */
+export const beyond = {
+  title: "Carnatic music",
+  body: [
+    "I'm a performing Carnatic vocalist. I train under Vidwan Sri Palghat Ramprasad in concert performance and vocal health technique, and continue to learn from his senior disciple Sri Rohith Chandrasekhar. My foundational training was under Vidwan Sri Meenakshi Sundaram and Vidushi Smt. Subha Ganesan.",
+    "Over the past few years I've accompanied my teacher as vocal support across India and abroad, and presented solo concerts in and beyond Chennai. I've kept this running at a serious level alongside a full-time engineering degree and research work — the two demand different things, and I've found the discipline transfers in both directions.",
+  ],
+  highlights: [
+    {
+      label: "Young Indian Cultural Ambassador (YICA)",
+      detail: "Birmingham Tyagaraja Festival, 2026",
+    },
+    {
+      label: "Vocal support, international",
+      detail:
+        "Madhuradhwani · SASTRA Satsangh · Surabharati Sanskrit Foundation · Karpahavalli, Australia",
+    },
+    {
+      label: "Solo concerts",
+      detail: "Sarvani Sangeetha Sabha · Margazhi Sangeetha Upasana",
+    },
+  ],
+};
+
 export const socials = [
   { label: "Email", href: "mailto:shrisharanyan.vasu@gmail.com", icon: "mail" },
   { label: "GitHub", href: "https://github.com/spellsharp", icon: "github" },
