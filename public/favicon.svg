@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="S">
+  <style>
+    :root { color-scheme: light dark; }
+    .plate { fill: #faf9f6; }
+    .mark  { fill: #1a1a1a; }
+    .dot   { fill: #0f6b63; }
+    @media (prefers-color-scheme: dark) {
+      .plate { fill: #16181a; }
+      .mark  { fill: #ececea; }
+      .dot   { fill: #5fbdb0; }
+    }
+  </style>
+  <rect class="plate" width="64" height="64" rx="14" />
+  <text
+    class="mark"
+    x="29"
+    y="45"
+    text-anchor="middle"
+    font-family="Newsreader, Georgia, 'Times New Roman', serif"
+    font-size="42"
+    font-weight="500"
+  >S</text>
+  <circle class="dot" cx="48" cy="42" r="4.5" />
+</svg>
