@@ -107,7 +107,8 @@ export const research = [
  */
 export const publications = [
   {
-    title: "",
+    title:
+      "Global to Local Registration: Transferring Pretrained Registration Models to CT/MR–Ultrasound via Anatomical Supervision",
     authors: "",
     venue: "ASMUS Workshop, MICCAI",
     year: "",
@@ -115,7 +116,8 @@ export const publications = [
     links: [],
   },
   {
-    title: "",
+    title:
+      "Beyond In-Distribution Metrics: A Systematic Out-of-Distribution Evaluation of Congenital Heart Disease Segmentation",
     authors: "",
     venue: "STACOM Workshop, MICCAI",
     year: "",
