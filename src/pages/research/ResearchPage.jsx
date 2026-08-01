@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, PageHeader } from "../../components/misc/Layout";
 import ResearchEntry from "../../components/research/ResearchEntry";
+import Publications from "../../components/research/Publications";
 import { research } from "../../content/site";
 
 const ResearchPage = () => {
@@ -24,6 +25,7 @@ const ResearchPage = () => {
       {research.map((item) => (
         <ResearchEntry key={item.slug} item={item} />
       ))}
+      <Publications />
     </Container>
   );
 };
