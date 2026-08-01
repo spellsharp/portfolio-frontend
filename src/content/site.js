@@ -6,6 +6,7 @@
 import cardiacFigure from "../assets/research/cardiac.jpg";
 import colitisFigure from "../assets/research/ulcerative-colitis.jpg";
 import gsocLogo from "../assets/research/gsoc.png";
+import portrait from "../assets/home/portrait.jpg";
 
 export const profile = {
   name: "Shrisharanyan Vasu",
@@ -16,9 +17,7 @@ export const profile = {
   location: "India",
   email: "shrisharanyan.vasu@gmail.com",
   resume: "https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f",
-  // Drop in a headshot (e.g. `import portrait from "../assets/home/portrait.jpg"`)
-  // and set `portrait` to it — until then a generated SVG stands in.
-  portrait: null,
+  portrait,
   tagline:
     "I build machine learning systems for medicine, and the open scientific ML infrastructure they run on — mostly where data is scarce, labels come from experts, and being wrong carries a cost.",
   bio: [
