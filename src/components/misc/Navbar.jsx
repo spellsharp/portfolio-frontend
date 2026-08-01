@@ -1,135 +1,107 @@
-import { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const UnderlineLink = styled.a`
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color: white;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: width 0.3s ease;
-  }
-  
-  &:hover::after {
-    width: 100%;
-  }
-`;
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
+import ThemeToggle from "./ThemeToggle";
+import { profile } from "../../content/site";
 
 export const navLinks = [
-  {
-    id: "/",
-    title: "Home",
-    target: "_self"
-  },
-  {
-    id: "/about",
-    title: "About",
-    target: "_self"
-  },
-  {
-    id: "/projects",
-    title: "Projects",
-    target: "_self"
-  },
-  {
-    id: "/contact",
-    title: "Contact",
-    target: "_self"
-  },
-  {
-    id: "/wormhole",
-    title: "Wormhole",
-    target: "_self"
-  },
-  {
-    id: "https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f",
-    title: "Résumé",
-    target: "_blank"
-  }
+  { to: "/", label: "Home" },
+  { to: "/research", label: "Research" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ];
 
+const linkClass = ({ isActive }) =>
+  [
+    "text-[15px] transition-colors duration-200 hover:text-ink",
+    isActive ? "text-ink" : "text-muted",
+  ].join(" ");
+
 const Navbar = () => {
-  const [active, setActive] = useState();
-  const [toggle, setToggle] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const isMobile = windowWidth <= 865;
-
   return (
-    <nav className="absolute top-0 text-white font-bold w-full flex py-6 justify-between items-center navbar">
-      <div>
-        <Link to="/" className="nav-link">
-          <div className="ml-5 lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold flex items-center tracking-wide">
-            Sharan<span className="ml-1 text-blue-500">.</span>
-          </div>
-        </Link>
-      </div>
-      {isMobile ? (
-        <FaBars
-          className="w-[35px] h-[33px] pr-4 object-contain"
-          onClick={() => setToggle(!toggle)}
-        />
-      ) : (
-        <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-          {navLinks.map((nav, index) => (
-            <li
-              key={nav.id}
-              className={`font-poppins font-normal cursor-pointer text-xl hover:underline hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500 hover:bg-opacity-20 rounded-full underline-offset-4 transition-all ease-in-out duration-500 ${
-                active === nav.title ? "text-underline" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-5 hover:shadow-[0_0_15px_1px_rgba(59,130,246,0.30)] hover:bg-blue-500" : "mr-10"}`}
-              onClick={() => {setActive(nav.title); setToggle(!toggle)}}
-            >
-              <UnderlineLink className="hover:scale-x-110 duration-500 transition-all" target={nav.target} href={`${nav.id}`}>{nav.title}</UnderlineLink>
-
-            </li>
-          ))}
-        </ul>
-      )}
-      {isMobile && toggle && (
-        <div
-          className={`flex bg-default bg-opacity-95 shadow-[0_0_15px_1px_rgba(59,130,246,0.3)] border border-white border-opacity-10 z-10 px-10 py-5 bg-black-gradient absolute top-20 right-0 mx-4 my-2 w-fit rounded-xl sidebar`}
+    <header className="sticky top-0 z-40 nav-surface border-b border-rule-soft backdrop-blur-md">
+      <nav className="mx-auto flex max-w-page items-center justify-between px-6 py-4 md:px-10">
+        <Link
+          to="/"
+          onClick={() => setOpen(false)}
+          className="font-serif text-xl tracking-tight text-ink"
         >
-          <ul className="list-none flex justify-center items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-medium cursor-pointer text-md ${
-                  active === nav.title ? "underline" : ""
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => {setActive(nav.title); setToggle(!toggle)}}
-              >
-                <Link to={`${nav.id}`} className="nav-link">
-                {`${nav.title}`}
-                </Link>
+          {profile.short}
+          <span className="text-accent">.</span>
+        </Link>
 
+        <div className="hidden items-center gap-8 md:flex">
+          {navLinks.map((l) => (
+            <NavLink key={l.to} to={l.to} className={linkClass} end={l.to === "/"}>
+              {l.label}
+            </NavLink>
+          ))}
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[15px] text-muted transition-colors duration-200 hover:text-ink"
+          >
+            CV
+          </a>
+          <ThemeToggle />
+        </div>
+
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            className="grid h-9 w-9 place-items-center rounded-full border border-rule text-muted"
+          >
+            {open ? <FiX size={16} /> : <FiMenu size={16} />}
+          </button>
+        </div>
+      </nav>
+
+      {open && (
+        <div className="border-t border-rule-soft px-6 pb-5 pt-2 md:hidden">
+          <ul className="flex flex-col gap-1">
+            {navLinks.map((l) => (
+              <li key={l.to}>
+                <NavLink
+                  to={l.to}
+                  end={l.to === "/"}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `block py-2 text-[15px] ${
+                      isActive ? "text-ink" : "text-muted"
+                    }`
+                  }
+                >
+                  {l.label}
+                </NavLink>
               </li>
             ))}
+            <li>
+              <a
+                href={profile.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="block py-2 text-[15px] text-muted"
+              >
+                CV
+              </a>
+            </li>
           </ul>
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

@@ -1,39 +1,102 @@
-import Sharan from "../../assets/home/sharan_mic.jpg";
-import ImageBlob from "../../components/misc/ImageBlob";
-import Footer from "../../components/misc/Footer";
+import { Link } from "react-router-dom";
+import { Container, Section } from "../../components/misc/Layout";
+import Icon from "../../components/misc/Icons";
+import { PortraitPlaceholder } from "../../components/misc/Placeholder";
+import { profile, research, experience } from "../../content/site";
 
-const HomePage = () => {
-  return (
-    <>
-      <div className="flex items-center justify-center min-h-screen px-2">
-        <section className="flex drop-shadow-lg mt-20">
-          <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col mx-auto items-center lg:space-x-12 md:space-x-12 sm:space-x-0 space-x-0">
-            <div className="w-auto">
-              <div className="mx-auto lg:px-32 md:px-32 sm:px-0 px-0">
-                <ImageBlob src={Sharan} />
+const HomePage = () => (
+  <Container>
+    {/* Hero */}
+    <section className="grid gap-10 pb-16 pt-20 md:grid-cols-[1fr_220px] md:items-start md:pt-28">
+      <div>
+        <div className="eyebrow mb-5">
+          {profile.role} · {profile.org}
+        </div>
+        <h1 className="text-4xl leading-[1.1] md:text-6xl">{profile.name}</h1>
+        <p className="mt-6 max-w-prose text-lg text-muted">{profile.tagline}</p>
+
+        <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3">
+          <Link
+            to="/research"
+            className="inline-flex items-center gap-2 border-b border-accent pb-0.5 text-[15px] text-accent transition-opacity hover:opacity-70"
+          >
+            Selected work
+            <Icon name="arrow" size={15} />
+          </Link>
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-[15px] text-muted transition-colors hover:text-ink"
+          >
+            Curriculum vitae
+            <Icon name="arrowUpRight" size={14} />
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="inline-flex items-center gap-1.5 text-[15px] text-muted transition-colors hover:text-ink"
+          >
+            Email
+            <Icon name="mail" size={14} />
+          </a>
+        </div>
+      </div>
+
+      <div className="order-first w-32 overflow-hidden rounded-md border border-rule md:order-none md:w-full">
+        <div className="aspect-square">
+          {profile.portrait ? (
+            <img
+              src={profile.portrait}
+              alt={profile.name}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <PortraitPlaceholder />
+          )}
+        </div>
+      </div>
+    </section>
+
+    {/* Selected work */}
+    <Section title="Selected work">
+      <ul className="divide-y divide-rule-soft border-y border-rule-soft">
+        {research.map((item) => (
+          <li key={item.slug}>
+            <Link
+              to={`/research#${item.slug}`}
+              className="group grid gap-2 py-6 md:grid-cols-[1fr_auto] md:items-baseline md:gap-8"
+            >
+              <div>
+                <h3 className="text-xl transition-colors group-hover:text-accent md:text-[22px]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 max-w-prose text-[15px] text-muted">
+                  {item.summary}
+                </p>
               </div>
-            </div>
-            <div className="lg:text-left md:text-center sm:text-center text-center px-5">
-              <br />
-              <div className="lg:text-6xl md:text-6xl sm:text-2xl text-2xl font-semibold mb-2">Welcome to my Portfolio</div> 
-              <div className="lg:text-2xl md:text-2xl sm:text-sm text-sm lg:max-w-3xl md:max-w-2xl sm:max-w-xs max-w-xs">I'm a passionate student of ML & Data Science. But I also delve in web development. This is one such side-quest ;)</div>
-              <div className="flex flex-col justify-center lg:justify-start lg:flex-row md:flex-row sm:flex-col py-5">
-                <a
-                  href="/about"
-                  className="sm:mx-auto lg:mx-0 md:mx-0 mx-auto lg:p-4 lg:text-xl md:p-4 md:text-2xl sm:p-3 sm:text-xl max-w-fit p-3 text-xl shadow-[0_0_15px_1px_rgba(59,130,246,0.60)] border bg-blue-500 rounded-md border-white bg-opacity-0 lg:border-opacity-100 hover:bg-blue-500 hover:border-opacity-0 hover:transition-all duration-500 ease-in-out"
-                >
-                  About me
-                </a>
+              <div className="font-mono text-xs text-faint md:text-right">
+                {item.period}
               </div>
-            </div>            
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Section>
+
+    {/* Now */}
+    <Section title="Currently">
+      <div className="grid gap-8 md:grid-cols-2">
+        {experience.slice(0, 2).map((e) => (
+          <div key={e.org}>
+            <div className="font-mono text-xs text-faint">{e.period}</div>
+            <h3 className="mt-2 text-lg">{e.role}</h3>
+            <div className="text-[15px] text-accent">{e.org}</div>
+            <p className="mt-2 text-[15px] text-muted">{e.detail}</p>
           </div>
-        </section>
+        ))}
       </div>
-      <div className="w-full">
-          <Footer />
-      </div>
-    </>
-  );
-};
+    </Section>
+  </Container>
+);
 
 export default HomePage;

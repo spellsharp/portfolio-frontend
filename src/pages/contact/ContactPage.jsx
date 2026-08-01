@@ -1,22 +1,52 @@
-import React from "react";
-import Collaborate from "../../assets/contact/collaboration.svg";
-import Footer from "../../components/misc/Footer";
+import { Container, PageHeader, Section } from "../../components/misc/Layout";
+import Icon from "../../components/misc/Icons";
+import { profile, socials } from "../../content/site";
 
-import SocialMediaHandles from "../../components/contact/SocialMediaHandles";
+const ContactPage = () => (
+  <Container>
+    <PageHeader
+      eyebrow="Contact"
+      title="Get in touch"
+      lead="Open to conversations about clinical machine learning, medical imaging, and open-source scientific tooling."
+    />
 
-const ContactPage = () => {
-  return (
-    <>
-    <div className="min-h-screen flex lg:flex-row lg:space-x-5 md:flex-col md:space-y-3 sm:flex-col sm:space-y-3 flex-col space-y-3 justify-center items-center">
-      <div className="mt-20 flex flex-col text-center lg:text-5xl md:text-5xl sm:text-3xl text-3xl items-center max-w-3xl">
-        <div className="font-semibold">Let's work on something together!</div>
-        <img src={Collaborate} alt="Collaborate" className="lg:w-1/2 md:w-1/2 sm:w-full" />
-      </div>
-      <SocialMediaHandles />
-    </div>
-    <Footer />
-  </>
-  );
-};
+    <Section>
+      <a
+        href={`mailto:${profile.email}`}
+        className="inline-flex items-center gap-3 font-serif text-2xl text-ink transition-colors hover:text-accent md:text-4xl"
+      >
+        {profile.email}
+        <Icon name="arrowUpRight" size={22} />
+      </a>
+    </Section>
+
+    <Section title="Elsewhere">
+      <ul className="border-t border-rule-soft">
+        {socials
+          .filter((s) => !s.href.startsWith("mailto:"))
+          .map((s) => (
+            <li key={s.label} className="border-b border-rule-soft">
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between py-4 text-[15px] text-muted transition-colors hover:text-ink"
+              >
+                <span className="flex items-center gap-3">
+                  <Icon name={s.icon} size={16} />
+                  {s.label}
+                </span>
+                <Icon
+                  name="arrowUpRight"
+                  size={15}
+                  className="text-faint transition-colors group-hover:text-accent"
+                />
+              </a>
+            </li>
+          ))}
+      </ul>
+    </Section>
+  </Container>
+);
 
 export default ContactPage;

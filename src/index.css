@@ -1,3 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,500;0,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
-@tailwind utilities;  
+@tailwind utilities;
+
+:root {
+  --bg: #faf9f6;
+  --bg-raised: #ffffff;
+  --ink: #1a1a1a;
+  --ink-muted: #5c5c58;
+  --ink-faint: #8a8a84;
+  --rule: rgba(26, 26, 26, 0.12);
+  --rule-soft: rgba(26, 26, 26, 0.07);
+  --accent: #0f6b63;
+  --accent-soft: rgba(15, 107, 99, 0.09);
+  --selection: rgba(15, 107, 99, 0.16);
+}
+
+[data-theme="dark"] {
+  --bg: #0e0f10;
+  --bg-raised: #16181a;
+  --ink: #ececea;
+  --ink-muted: #a3a39d;
+  --ink-faint: #74746e;
+  --rule: rgba(236, 236, 234, 0.14);
+  --rule-soft: rgba(236, 236, 234, 0.08);
+  --accent: #5fbdb0;
+  --accent-soft: rgba(95, 189, 176, 0.12);
+  --selection: rgba(95, 189, 176, 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: var(--selection);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: Newsreader, ui-serif, Georgia, serif;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+}
+
+@layer components {
+  /* Inline prose link: hairline underline that thickens on hover. */
+  .link {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    transition: text-decoration-color 0.2s ease;
+  }
+  .link:hover {
+    text-decoration-color: var(--accent);
+  }
+
+  /* Translucent sticky header. Tailwind v3 can't apply an opacity modifier to a
+     var()-based colour, so the blend is done here explicitly. */
+  .nav-surface {
+    background-color: var(--bg);
+  }
+  @supports (background-color: color-mix(in srgb, red 50%, transparent)) {
+    .nav-surface {
+      background-color: color-mix(in srgb, var(--bg) 85%, transparent);
+    }
+  }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .tag {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border: 3px solid var(--bg);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

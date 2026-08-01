@@ -1,31 +1,22 @@
-import React from "react";
-import NotFound from "../../assets/notfound/not_found.svg";
+import { Link } from "react-router-dom";
+import { Container } from "../../components/misc/Layout";
+import Icon from "../../components/misc/Icons";
 
-const NotFoundPage = () => {
-  return (
-    <>
-      <div className="flex lg:flex-row md:flex-col sm:flex-col-reverse flex-col-reverse justify-center mx-auto max-w-7xl">
-        <img alt="NotFound" src={NotFound} className="lg:h-screen md:h-[70vh]"></img>
-        <div className="mx-auto my-auto px-10 py-10">
-          <div className="lg:text-5xl md:text-5xl sm:text-3xl text-3xl font-bold">
-            Oops!
-          </div>
-          <div className="lg:text-3xl md:text-3xl sm:text-lg text-lg">
-            You must have fallen into a wormhole...
-          </div>
-          <br />
-          <div className="lg:text-xl md:text-xl sm:texl-sm text-sm">
-            Let's go back{" "}
-            <a href="/">
-              <button className="ml-2 shadow-[0_0_15px_1px_rgba(59,130,246,0.60)] p-3 rounded-xl border border-white hover:bg-blue-500 hover:border-opacity-0 hover:transition-all duration-500 ease-in-out">
-                home
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+const NotFoundPage = () => (
+  <Container className="flex min-h-[70vh] flex-col justify-center">
+    <div className="eyebrow mb-5">Error 404</div>
+    <h1 className="text-4xl md:text-5xl">This page doesn't exist</h1>
+    <p className="mt-5 max-w-prose text-muted">
+      The link may be out of date, or the page has moved.
+    </p>
+    <Link
+      to="/"
+      className="mt-8 inline-flex w-fit items-center gap-2 border-b border-accent pb-0.5 text-[15px] text-accent transition-opacity hover:opacity-70"
+    >
+      Back home
+      <Icon name="arrow" size={15} />
+    </Link>
+  </Container>
+);
 
 export default NotFoundPage;

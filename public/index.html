@@ -2,24 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/SharanLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="%PUBLIC_URL%/SharanLogo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/SharanLogo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Shrisharanyan Vasu — Healthcare AI</title>
     <meta
       name="description"
-      content="Shrisharanyan Vasu's Portfolio Website"
+      content="Shrisharanyan Vasu is a healthcare AI engineer at MaitriLabs working on machine learning for clinical imaging — cardiac segmentation, congenital heart disease classification, and ulcerative colitis grading."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!-- TODO: replace with your own icons -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Shrisharanyan Vasu</title>
+    <meta name="author" content="Shrisharanyan Vasu" />
+    <meta name="theme-color" content="#faf9f6" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shrisharanyan Vasu — Healthcare AI" />
+    <meta
+      property="og:description"
+      content="Machine learning for clinical imaging: cardiology, gastroenterology, and scientific ML infrastructure."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Resolve the theme before first paint so there is no light/dark flash. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <style>
-    /* * {
-      cursor: url("%PUBLIC_URL%/Cursor.png"),
-        auto;
-    } */
-  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
