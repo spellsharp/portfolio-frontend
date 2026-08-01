@@ -3,6 +3,10 @@
  * Swap `image` fields to a real asset import to replace the generated SVG placeholders.
  */
 
+import cardiacFigure from "../assets/research/cardiac.jpg";
+import colitisFigure from "../assets/research/ulcerative-colitis.jpg";
+import gsocLogo from "../assets/research/gsoc.png";
+
 export const profile = {
   name: "Shrisharanyan Vasu",
   short: "Sharan",
@@ -39,6 +43,9 @@ export const research = [
     venue: "MaitriLabs",
     period: "2025 — present",
     figure: "cardiac",
+    image: cardiacFigure,
+    imageAlt:
+      "Multi-planar cardiac CT views with labelled chamber segmentations alongside a 3D reconstruction of the heart",
     summary:
       "Deep learning pipelines for cardiac imaging: classifying congenital heart disease and segmenting cardiac structures from volumetric scans.",
     body: [
@@ -54,6 +61,9 @@ export const research = [
     venue: "MaitriLabs",
     period: "2025 — present",
     figure: "endoscopy",
+    image: colitisFigure,
+    imageAlt:
+      "Endoscopic view of colonic mucosa showing erythema and areas of mucosal bleeding",
     summary:
       "AI-assisted grading of inflammatory bowel disease severity, learning the ordinal structure of clinical endoscopic scores.",
     body: [
@@ -69,6 +79,10 @@ export const research = [
     venue: "Google Summer of Code 2025 · DeepChem",
     period: "2025",
     figure: "spectral",
+    image: gsocLogo,
+    imageAlt: "Google Summer of Code logo",
+    // A logo, not a scan — letterbox it rather than cropping to fill.
+    imageFit: "contain",
     summary:
       "Built the Fourier Neural Operator and integrated it into DeepChem's model library as a maintained, documented contribution.",
     body: [

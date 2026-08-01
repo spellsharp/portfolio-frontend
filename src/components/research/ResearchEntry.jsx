@@ -7,12 +7,19 @@ const ResearchEntry = ({ item }) => (
     className="grid scroll-mt-24 gap-8 border-b border-rule-soft py-12 md:grid-cols-[300px_1fr] md:gap-12"
   >
     <div className="overflow-hidden rounded-md border border-rule">
-      <div className="aspect-[4/3]">
+      <div
+        className={`aspect-[4/3] ${
+          item.imageFit === "contain" ? "bg-white p-6" : ""
+        }`}
+      >
         {item.image ? (
           <img
             src={item.image}
-            alt={item.title}
-            className="h-full w-full object-cover"
+            alt={item.imageAlt ?? item.title}
+            loading="lazy"
+            className={`h-full w-full ${
+              item.imageFit === "contain" ? "object-contain" : "object-cover"
+            }`}
           />
         ) : (
           <FigurePlaceholder kind={item.figure} />
