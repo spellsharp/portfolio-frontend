@@ -6,7 +6,7 @@
 import cardiacFigure from "../assets/research/cardiac.jpg";
 import colitisFigure from "../assets/research/ulcerative-colitis.jpg";
 import gsocLogo from "../assets/research/gsoc.png";
-import portrait from "../assets/home/portrait.jpg";
+import portrait from "../assets/home/portrait-v2.webp";
 
 export const profile = {
   name: "Shrisharanyan Vasu",
