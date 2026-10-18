@@ -7,6 +7,9 @@ import { useEffect, useRef } from "react";
  * Each node is a damped spring anchored to its home position, and every edge is
  * a softer spring at its rest length, so dragging one node tugs its neighbours
  * and releasing it springs back with an underdamped bounce.
+ *
+ * Homes wander slowly so the whole thing drifts, and the cursor pushes nearby
+ * nodes aside and links itself to the closest few.
  */
 
 const COUNT = 34;
@@ -17,6 +20,15 @@ const HOME_K = 90; // anchor stiffness
 const HOME_C = 6; // anchor damping -> zeta ~0.32, visibly bouncy
 const EDGE_K = 14; // neighbour coupling
 const EDGE_C = 1.4;
+
+// Cursor field. Inside GRAB_R a node leans toward the cursor so it stays easy
+// to grab; between GRAB_R and PUSH_R it is pushed aside.
+const GRAB_R = 34;
+const PUSH_R = 130;
+const PUSH_F = HOME_K * 14; // ~14px peak displacement
+const PULL_F = HOME_K * 6;
+const MOUSE_LINK = 180;
+const MOUSE_LINKS = 6;
 
 const mulberry32 = (seed) => () => {
   seed |= 0;
@@ -41,6 +53,7 @@ const buildGraph = (seed) => {
       hy: (r + 0.5 + (rand() - 0.5) * 0.9) / rows,
       r: 1.8 + rand() * rand() * 7.5, // skewed small, a few large
       phase: rand() * Math.PI * 2,
+      phase2: rand() * Math.PI * 2,
       drift: 0.4 + rand() * 0.7,
       x: 0,
       y: 0,
@@ -143,13 +156,32 @@ const Constellation = () => {
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Home position in pixels, including the slow idle breathing offset.
+    // Home position in pixels, including the slow wander. Two incommensurate
+    // sines per axis so the path never visibly loops.
     const homeOf = (n, t) => {
-      const amp = reduced ? 0 : 5 * n.drift;
+      const amp = reduced ? 0 : 16 * n.drift;
+      const s = n.drift;
       return {
-        x: n.hx * w + Math.sin(t * 0.35 * n.drift + n.phase) * amp,
-        y: n.hy * h + Math.cos(t * 0.28 * n.drift + n.phase) * amp,
+        x:
+          n.hx * w +
+          (Math.sin(t * 0.42 * s + n.phase) * 0.65 +
+            Math.sin(t * 0.17 * s + n.phase2) * 0.35) *
+            amp,
+        y:
+          n.hy * h +
+          (Math.cos(t * 0.33 * s + n.phase) * 0.65 +
+            Math.cos(t * 0.13 * s + n.phase2) * 0.35) *
+            amp,
       };
+    };
+
+    // Signed cursor force at distance d: pull (<0) inside GRAB_R, push (>0)
+    // in the ring out to PUSH_R. Continuous at GRAB_R so nothing jitters.
+    const cursorForce = (d) => {
+      if (d < GRAB_R) return -PULL_F * (1 - d / GRAB_R);
+      if (d < PUSH_R)
+        return PUSH_F * Math.sin((Math.PI * (d - GRAB_R)) / (PUSH_R - GRAB_R));
+      return 0;
     };
 
     const resize = () => {
@@ -211,6 +243,17 @@ const Constellation = () => {
         const mass = 0.6 + n.r * 0.09;
         n.vx += ((home.x - n.x) * HOME_K - n.vx * HOME_C) * (dt / mass);
         n.vy += ((home.y - n.y) * HOME_K - n.vy * HOME_C) * (dt / mass);
+
+        if (pointer.inside && !reduced) {
+          const dx = n.x - pointer.x;
+          const dy = n.y - pointer.y;
+          const d = Math.hypot(dx, dy);
+          if (d > 0.5 && d < PUSH_R) {
+            const f = cursorForce(d);
+            n.vx += (dx / d) * f * (dt / mass);
+            n.vy += (dy / d) * f * (dt / mass);
+          }
+        }
       }
 
       // Edge springs: neighbours get dragged along, then settle.
@@ -265,6 +308,26 @@ const Constellation = () => {
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
         ctx.stroke();
+      }
+
+      // Cursor links: the pointer joins the network as a temporary node.
+      if (pointer.inside) {
+        const near = [];
+        for (let i = 0; i < nodes.length; i++) {
+          if (i === dragIndex) continue;
+          const d = Math.hypot(nodes[i].x - pointer.x, nodes[i].y - pointer.y);
+          if (d < MOUSE_LINK) near.push([d, nodes[i]]);
+        }
+        near.sort((a, b) => a[0] - b[0]);
+        ctx.lineWidth = 0.8;
+        for (let k = 0; k < Math.min(MOUSE_LINKS, near.length); k++) {
+          const [d, n] = near[k];
+          ctx.strokeStyle = withAlpha(theme.accent, (1 - d / MOUSE_LINK) * 0.7);
+          ctx.beginPath();
+          ctx.moveTo(pointer.x, pointer.y);
+          ctx.lineTo(n.x, n.y);
+          ctx.stroke();
+        }
       }
 
       for (let i = 0; i < nodes.length; i++) {
@@ -358,9 +421,6 @@ const Constellation = () => {
         aria-label="Decorative constellation of connected dots that can be dragged"
         className="block h-full w-full"
       />
-      <div className="pointer-events-none absolute bottom-0 right-0 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
-        drag a node
-      </div>
     </div>
   );
 };

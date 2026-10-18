@@ -6,25 +6,15 @@ import {
   skills,
   beyond,
 } from "../../content/site";
+import OrgName from "../../components/misc/OrgName";
 
-const Entry = ({ primary, secondary, secondaryUrl, period, detail }) => (
+const Entry = ({ primary, secondary, secondaryUrl, orgs, period, detail }) => (
   <div className="grid gap-1 border-b border-rule-soft py-6 md:grid-cols-[130px_1fr] md:gap-8">
     <div className="pt-1 font-mono text-xs text-faint">{period}</div>
     <div>
       <h3 className="text-lg">{primary}</h3>
       <div className="text-[15px] text-accent">
-        {secondaryUrl ? (
-          <a
-            href={secondaryUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
-          >
-            {secondary}
-          </a>
-        ) : (
-          secondary
-        )}
+        <OrgName org={secondary} orgUrl={secondaryUrl} orgs={orgs} />
       </div>
       {detail && <p className="mt-2 max-w-prose text-[15px] text-muted">{detail}</p>}
     </div>
@@ -44,9 +34,10 @@ const AboutPage = () => (
     </Section>
 
     <Section title="Research interests">
-      <ul className="flex flex-wrap gap-2">
+      <ul className="grid gap-x-10 gap-y-3 md:grid-cols-2">
         {profile.interests.map((i) => (
-          <li key={i} className="tag">
+          <li key={i} className="flex items-baseline gap-3 text-[15px] text-ink">
+            <span className="h-px w-4 shrink-0 translate-y-[-4px] bg-accent" />
             {i}
           </li>
         ))}
@@ -61,6 +52,7 @@ const AboutPage = () => (
             primary={e.role}
             secondary={e.org}
             secondaryUrl={e.orgUrl}
+            orgs={e.orgs}
             period={e.period}
             detail={e.detail}
           />

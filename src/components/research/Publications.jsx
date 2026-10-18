@@ -27,7 +27,7 @@ const AuthorList = ({ authors, equalContribution = [] }) => {
       </p>
       {marked && (
         <p className="mt-1 text-sm text-faint">
-          <span className="text-accent">*</span> Equal contribution.
+          <span className="text-accent">*</span> Co-first authors.
         </p>
       )}
     </>

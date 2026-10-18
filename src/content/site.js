@@ -12,19 +12,19 @@ export const profile = {
   name: "Shrisharanyan Vasu",
   short: "Sharan",
   role: "Deep Learning Researcher — Healthcare",
-  org: "MaitriLabs",
-  orgUrl: "",
+  org: "Maitri-Labs",
+  orgUrl: "https://maitri-labs.ai",
   location: "India",
   email: "shrisharanyan.vasu@gmail.com",
-  resume: "https://www.overleaf.com/read/tzrpndxvfxzk#b7e43f",
+  resume: "https://www.overleaf.com/read/ygvtrprfqxyq#277c2c",
   portrait,
   tagline:
-    "I build machine learning systems for medicine, and the open scientific ML infrastructure they run on — mostly where data is scarce, labels come from experts, and being wrong carries a cost.",
+    "I build deep learning models for medical imaging and contribute to the open-source tools behind them.",
   bio: [
-    "I'm a deep learning researcher at MaitriLabs, working on machine learning for clinical imaging. Most of my time goes to problems where the model has to hold up against messy, low-volume, expert-annotated medical data rather than clean benchmarks.",
-    "So far that has taken me across cardiology — congenital heart disease classification and cardiac structure segmentation — and gastroenterology, grading ulcerative colitis severity from endoscopic imaging. I'm not tied to one clinical domain; what carries over between them is the methodology, and the fact that calibration and failure behaviour matter as much as headline accuracy.",
-    "Alongside the clinical work, I care about the scientific ML tooling underneath it. In Google Summer of Code 2025 I implemented the Fourier Neural Operator and integrated it into DeepChem, an open-source library used widely across computational chemistry and the life sciences.",
-    "I contribute to Project MONAI's Ultrasound Working Group, where a recent collaboration led to a paper at the ASMUS workshop at MICCAI. My work has also appeared at STACOM, MICCAI's workshop on statistical atlases and computational modelling of the heart. Working in the open, on shared infrastructure that other groups build clinical research on, is the part of this field I find most worth the effort.",
+    "I'm a deep learning researcher at Maitri-Labs. I work on medical imaging models trained on small datasets labelled by clinicians.",
+    "I've worked on congenital heart disease classification and cardiac segmentation, and on grading ulcerative colitis from endoscopy. In both, I care about calibration and failure cases as much as accuracy.",
+    "I also work on open-source scientific ML. For Google Summer of Code 2025, I added the Fourier Neural Operator to DeepChem.",
+    "I contribute to Project MONAI's Ultrasound Working Group, where a collaboration led to a paper at the ASMUS workshop at MICCAI 2026. I've also published at STACOM, MICCAI's workshop on cardiac modelling.",
   ],
   interests: [
     "Medical image segmentation",
@@ -39,7 +39,7 @@ export const research = [
   {
     slug: "chd",
     title: "Congenital heart disease classification and cardiac segmentation",
-    venue: "MaitriLabs",
+    venue: "Maitri-Labs",
     period: "2025 — present",
     figure: "cardiac",
     image: cardiacFigure,
@@ -57,7 +57,7 @@ export const research = [
   {
     slug: "ibd-uc",
     title: "Ulcerative colitis severity grading from endoscopy",
-    venue: "MaitriLabs",
+    venue: "Maitri-Labs",
     period: "2025 — present",
     figure: "endoscopy",
     image: colitisFigure,
@@ -101,8 +101,7 @@ export const research = [
 
 /**
  * Publications. An entry renders only once it has a `title` — this keeps a
- * half-filled citation from ever reaching the live site. Fill in the ASMUS
- * paper's title, author list, year and link to publish it.
+ * half-filled citation from ever reaching the live site.
  */
 export const publications = [
   {
@@ -114,27 +113,33 @@ export const publications = [
     venue: "STACOM Workshop, MICCAI",
     year: "2026",
     note: "",
-    links: [],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.17068" }],
   },
   {
     title:
       "Global to Local Registration: Transferring Pretrained Registration Models to CT/MR–Ultrasound via Anatomical Supervision",
     authors:
-      "Gabriella d'Albenzio, Mengting Liu, Shixing Ma, Chunna Yang, Yuhao Wei, Shrisharanyan Vasu, Aniketh Vijesh, Xihan Ma, Zachary P. Taylor, Tanmoy Sarkar Pias, Basar Demir, Miklós Gyöngy, Yasin Ceran, Marc Niethammer, Stephen R. Aylward, Tina Kapur, Gabor Fichtinger, Zhe Min, Mirabela Rusu",
+      "Gabriella d'Albenzio, Mengting Liu, Shixing Ma, Chunna Yang, Yuhao Wei, Shrisharanyan Vasu, Aniketh Vijesh, Xihan Ma, Zachary P. Taylor, Tanmoy Sarkar Pias, Basar Demir, Miklós Gyöngy, Yasin Ceran, Marc Niethammer, Tina Kapur, Stephen R. Aylward, Gabor Fichtinger, Zhe Min, Mirabela Rusu",
     venue: "ASMUS Workshop, MICCAI",
     year: "2026",
     note: "Collaboration through the Project MONAI Ultrasound Working Group.",
-    links: [],
+    links: [
+      {
+        label: "Paper",
+        href: "https://papers.miccai.org/miccai-2026-sat/ASMUS_058.html",
+      },
+    ],
   },
 ];
 
 export const experience = [
   {
     role: "Deep Learning Researcher — Healthcare",
-    org: "MaitriLabs",
+    org: "Maitri-Labs",
+    orgUrl: "https://maitri-labs.ai",
     period: "2025 — present",
     detail:
-      "Machine learning for clinical imaging — congenital heart disease classification, cardiac segmentation, and ulcerative colitis severity grading.",
+      "Medical imaging models for congenital heart disease classification, cardiac segmentation and ulcerative colitis grading.",
   },
   {
     role: "Contributor",
@@ -142,14 +147,21 @@ export const experience = [
     orgUrl: "https://project-monai.github.io/",
     period: "2025 — present",
     detail:
-      "Contributing to open-source ultrasound tooling in Project MONAI; collaborative work published at the ASMUS workshop at MICCAI.",
+      "Open-source ultrasound tooling in Project MONAI. Our joint work was published at the ASMUS workshop at MICCAI 2026.",
   },
   {
     role: "Open Source Contributor",
     org: "DeepChem · Google Summer of Code",
+    orgs: [
+      { name: "DeepChem", url: "https://deepchem.io" },
+      {
+        name: "Google Summer of Code",
+        url: "https://summerofcode.withgoogle.com/archive/2025/projects/pCUg5nMr",
+      },
+    ],
     period: "2025",
     detail:
-      "Implemented the Fourier Neural Operator and integrated it into DeepChem's model library, with tests and documentation.",
+      "Added the Fourier Neural Operator to DeepChem's model library, with tests and documentation.",
   },
   {
     role: "Alumni Member",

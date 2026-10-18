@@ -3,6 +3,7 @@ import { Container, Section } from "../../components/misc/Layout";
 import Icon from "../../components/misc/Icons";
 import { PortraitPlaceholder } from "../../components/misc/Placeholder";
 import Constellation from "../../components/home/Constellation";
+import OrgName from "../../components/misc/OrgName";
 import { profile, research, experience } from "../../content/site";
 
 const HomePage = () => (
@@ -11,7 +12,8 @@ const HomePage = () => (
     <section className="grid gap-10 pb-16 pt-20 md:grid-cols-[1fr_220px] md:items-start md:pt-28">
       <div>
         <div className="eyebrow mb-5">
-          {profile.role} · {profile.org}
+          {profile.role} ·{" "}
+          <OrgName org={profile.org} orgUrl={profile.orgUrl} />
         </div>
         <h1 className="text-4xl leading-[1.1] md:text-6xl">{profile.name}</h1>
         <p className="mt-6 max-w-prose text-lg text-muted">{profile.tagline}</p>
@@ -94,18 +96,7 @@ const HomePage = () => (
             <div className="font-mono text-xs text-faint">{e.period}</div>
             <h3 className="mt-2 text-lg">{e.role}</h3>
             <div className="text-[15px] text-accent">
-              {e.orgUrl ? (
-                <a
-                  href={e.orgUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
-                >
-                  {e.org}
-                </a>
-              ) : (
-                e.org
-              )}
+              <OrgName org={e.org} orgUrl={e.orgUrl} orgs={e.orgs} />
             </div>
             <p className="mt-2 text-[15px] text-muted">{e.detail}</p>
           </div>
