@@ -1,3 +1,29 @@
-# https://www.robotstxt.org/robotstxt.html
+# All crawlers, including AI search and assistant crawlers, may read the whole site.
 User-agent: *
-Disallow:
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://shrisharanyan.com/sitemap.xml

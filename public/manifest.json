@@ -7,6 +7,26 @@
       "type": "image/svg+xml",
       "sizes": "any",
       "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "favicon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "favicon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
     }
   ],
   "start_url": ".",
